@@ -35,8 +35,15 @@ export class AddPersonaComponent implements OnInit {
 
     console.log(this.usuario);
     this.personaService.add(this.usuario).subscribe(
-      res => alert("Usuario " + this.usuario.user +" creado correctamente.") //this.router.navigate([''])
+      res => this.router.navigate([''])
     );
+    (error:any) => {
+      console.log(error);
+  }
+
+    alert("Usuario " + this.usuario.user +" creado correctamente.");
+    this.router.navigate(['']);
+    
   }
 
 

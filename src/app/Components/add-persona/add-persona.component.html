@@ -1,73 +1,70 @@
-  <!-- Toolbar -->
-  <div class="toolbar" role="banner">
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
-    <span>Person Add</span>
-      <div class="spacer"></div>
-  </div>
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img width="40" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+  <span>Person Add</span>
+  <div class="spacer"></div>
+</div>
 
-  <div class="caja1">
-        <form id="formulario">
-            <h3>Crear Persona</h3>
+<div class="caja1">
+  <form id="formulario">
+    <h3>Crear Persona</h3>
 
-                <div *ngFor="let persona of personas; first as isFirst">
-                  <label *ngIf="isFirst">User</label>
-                  <input *ngIf="isFirst" value={{persona.user}} placeholder="User" type="text" name="user" id="user" required [(ngModel)]= "usuario.user">
-              
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Surname</label>
-                  <input *ngIf="isFirst" value={{persona.surname}} placeholder="Surname" type="text" required id="surname" [(ngModel)]= "usuario.surname" name="surname">
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Password</label>
-                  <input *ngIf="isFirst" value={{persona.password}} placeholder="Password" type="password" required id="pass" [(ngModel)]= "usuario.password" name="pass">
-                  
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Company email</label>
-                  <input *ngIf="isFirst" value={{persona.company_email}} placeholder="Company email" type="email" required id="ce" [(ngModel)]= "usuario.company_email" name="ce">
-
-                  <br *ngIf="isFirst">
-                  
-                  <label *ngIf="isFirst">Personal email</label>
-                  <input *ngIf="isFirst" value={{persona.personal_email}} placeholder="Personal email" type="email" required id="pe" [(ngModel)]= "usuario.personal_email" name="pe">
-                  
-                  <br *ngIf="isFirst">
-                  
-                  <label *ngIf="isFirst">City</label>
-                  <input *ngIf="isFirst" value={{persona.city}} placeholder="City" type="text" required id="city" [(ngModel)]= "usuario.city" name="city">
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Active?</label>
-                  <input *ngIf="isFirst" value={{persona.active}} placeholder="Active" type="checkbox" id="active" [(ngModel)]= "usuario.active" name="active">
-
-                  <br *ngIf="isFirst">
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Imagen URL</label>
-                  <input *ngIf="isFirst" type="url" id="url" value={{persona.imagen_url}} [(ngModel)]= "usuario.imagen_url" name="imagen">
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Created date</label>
-                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.created_date}} [(ngModel)]= "usuario.created_date" name="cdate">
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Termination date</label>
-                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.termination_date}} [(ngModel)]= "usuario.termination_date" name="tdate">
+    <div>
+      <label>User</label>
+      <input placeholder="User" type="text" name="user" id="user" required [(ngModel)]="usuario.user">
 
 
-                </div>
-            
-                <button (click) ="crearPersona()"  id="boton-enviar">Crear Persona</button>
-                <button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
-    </form>
+      <br>
+
+      <label>Surname</label>
+      <input placeholder="Surname" type="text" required id="surname" [(ngModel)]="usuario.surname" name="surname">
+
+      <br>
+
+      <label>Password</label>
+      <input placeholder="Password" type="password" required id="pass" [(ngModel)]="usuario.password" name="pass">
+
+      <br>
+
+      <label>Company email</label>
+      <input placeholder="Company email" type="email" required id="ce" [(ngModel)]="usuario.company_email" name="ce">
+
+      <br>
+
+      <label>Personal email</label>
+      <input placeholder="Personal email" type="email" required id="pe" [(ngModel)]="usuario.personal_email" name="pe">
+
+      <br>
+
+      <label>City</label>
+      <input placeholder="City" type="text" required id="city" [(ngModel)]="usuario.city" name="city">
+
+      <br>
+
+      <label>Active?</label>
+      <input placeholder="Active" type="checkbox" id="active" [(ngModel)]="usuario.active" name="active">
+
+      <br>
+      <br>
+
+      <label>Imagen URL</label>
+      <input type="url" id="url" [(ngModel)]="usuario.imagen_url" name="imagen">
+
+      <br>
+
+      <label>Created date</label>
+      <input type="datetime" id="tdate" [(ngModel)]="usuario.created_date" name="cdate">
+
+      <br>
+
+      <label>Termination date</label>
+      <input type="datetime" id="tdate" [(ngModel)]="usuario.termination_date" name="tdate">
+
+
     </div>
+
+    <button (click)="crearPersona()" id="boton-enviar">Crear Persona</button>
+    <button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
+  </form>
+</div>

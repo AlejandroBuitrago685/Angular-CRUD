@@ -1,0 +1,38 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img width="40" alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    <span>Person Update</span>
+    <div class="spacer"></div>
+</div>
+<div class="cajaActual">
+    <form id="formulario">
+        <h3>Actualizar persona</h3>
+        <p>Aquí se visualizan los datos <strong>actuales</strong> de la persona.</p>
+
+        <div>
+            <label>ID Persona</label><label id="user" style="color: rgb(16, 206, 16);">{{id}}</label>
+            <br>
+            <label>User</label><label id="user" style="color: rgb(16, 206, 16);">{{user}}</label>
+            <br>
+            <label>Surname</label><label id="surname" style="color: rgb(16, 206, 16);">{{surname}}</label>
+            <br>
+            <label>Password</label><label id="password" style="color: rgb(16, 206, 16);">{{pass}}</label>
+            <br>
+            <label>Company email</label><label id="ce" style="color: rgb(16, 206, 16);">{{ce}}</label>
+            <br>
+            <label>Personal email</label><label id="pe" style="color: rgb(16, 206, 16);">{{pe}}</label>
+            <br>
+            <label>City</label><label id="city" style="color: rgb(16, 206, 16);">{{city}}</label>
+            <br>
+            <label>Active?</label><label id="active" style="color: rgb(16, 206, 16);">{{active}}</label>
+            <br>
+            <label>Imagen URL</label><label id="url" style="color: rgb(16, 206, 16);">{{url}}</label>
+            <br>
+            <label>Created date</label><label id="cdate" style="color: rgb(16, 206, 16);">{{cd}}</label>
+            <br>
+            <label>Termination date</label><label id="tdate" style="color: rgb(16, 206, 16);">{{td}}</label>
+        </div>
+        <button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
+    </form>
+</div>

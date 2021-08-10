@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AddPersonaComponent } from './Components/add-persona/add-persona.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PersonlistComponent } from './Components/personlist/personlist.component';
+import { UpdateComponent } from './Components/update/update.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PersonlistComponent } from './Components/personlist/personlist.componen
     AppComponent,
     AddPersonaComponent,
     HomeComponent,
-    PersonlistComponent
+    PersonlistComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

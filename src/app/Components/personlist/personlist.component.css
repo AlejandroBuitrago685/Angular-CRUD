@@ -58,11 +58,32 @@ tbody:hover tr:hover td {
 	padding: 5px;
 }
 
-
 .button-delete:hover {
-	background: red;
+	background: rgb(201, 2, 2);
   }
   
 .button-delete:active {
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+.button-update{
+	background-color: #1976d2;
+	border: none;
+	margin-top: 10px;
+	border-radius: 10px;
+	color: white;
+	padding: 5px;
+}
+
+.button-update:hover {
+	background: #1280ee;
+  }
+  
+.button-update:active {
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+
+.opcionestd {
+	  text-align: center;
   }

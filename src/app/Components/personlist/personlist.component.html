@@ -18,8 +18,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let persona of personas" id="fila">
-                <td id="id_persona">{{persona.id_persona}}</td>
+            <tr *ngFor="let persona of personas ; let i= index" id="{{i}}">
+                <td id="id_persona" style="color: #1976d2;">{{persona.id_persona}}</td>
                 <td>{{persona.user}}</td>
                 <td>{{persona.surname}}</td>
                 <td>{{persona.password}}</td>
@@ -30,7 +30,8 @@
                 <td>{{persona.imagen_url}}</td>
                 <td>{{persona.created_date}}</td>
                 <td>{{persona.termination_date}}</td>
-                <td><button (click)="borrarPersona()" class="button-delete">Borrar</button></td>
+                <td class="opcionestd"><button (click)="borrarPersona(persona.id_persona)" class="button-delete">Borrar</button>
+                    <button [routerLink]="['/update', persona.id_persona]" class="button-update">Actualizar</button></td>
             </tr>
         </tbody>
     </table>

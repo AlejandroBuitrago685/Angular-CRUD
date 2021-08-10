@@ -11,6 +11,7 @@ import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 export class PersonlistComponent implements OnInit {
   
   personas: Persona[] = [];
+  Filas : number[] = [];
 
   constructor(private personaService:PersonaServiceService) {}
    
@@ -25,18 +26,26 @@ export class PersonlistComponent implements OnInit {
 
   }
 
-  borrarPersona(){
+  borrarPersona(fila:string){
     var confirmacion = confirm("¿Está seguro de que quiere borrar el usuario seleccionado?.");
 
+    console.log(fila);
+    
     if(confirmacion){
-        
+        this.personaService.delete(fila).subscribe(
+          resp => console.log("Se ha borrado el usuario con ID: " + fila + " correctamente.")
+        );
+        (error:any) => {
+          console.log(error);
+        }
+
+        window.location.reload();
+      
     }
     else{
         console.log("Se ha cancelado el borrado.");
     }
   
   }
-
   
-
 }

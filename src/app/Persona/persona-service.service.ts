@@ -9,6 +9,7 @@ import { Persona } from './persona';
 export class PersonaServiceService {
 
   private ObtenerURL = "http://localhost:8080/v0/api/test/get";
+  private ObtenerUnaURL = "http://localhost:8080/v0/api/test/id";
   private AñadirURL = "http://localhost:8080/v0/api/test/add";
   private BorrarURL = "http://localhost:8080/v0/api/test/delete";
   private ActualizarURL = "http://localhost:8080/v0/api/test/update";
@@ -27,7 +28,7 @@ export class PersonaServiceService {
 
   //Obtener una única persona
   get(id:string):Observable<Persona>{
-    return this.http.get<Persona>(this.ObtenerURL + '/' + id);
+    return this.http.get<Persona>(this.ObtenerUnaURL + '/' + id);
   }
 
   //Borrar Persona
