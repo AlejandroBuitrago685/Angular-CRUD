@@ -1,0 +1,37 @@
+
+<div class="flex-container">
+    <table class="container" id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Surname</th>
+                <th>Password</th>
+                <th>Company Email</th>
+                <th>Personal Email</th>
+                <th>City</th>
+                <th>Active</th>
+                <th>Imagen URL</th>
+                <th>Created Date</th>
+                <th>Termination Date</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of personas" id="fila">
+                <td id="id_persona">{{persona.id_persona}}</td>
+                <td>{{persona.user}}</td>
+                <td>{{persona.surname}}</td>
+                <td>{{persona.password}}</td>
+                <td>{{persona.company_email}}</td>
+                <td>{{persona.personal_email}}</td>
+                <td>{{persona.city}}</td>
+                <td>{{persona.active}}</td>
+                <td>{{persona.imagen_url}}</td>
+                <td>{{persona.created_date}}</td>
+                <td>{{persona.termination_date}}</td>
+                <td><button (click)="borrarPersona()" class="button-delete">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
