@@ -15,56 +15,59 @@
 
                 <div *ngFor="let persona of personas; first as isFirst">
                   <label *ngIf="isFirst">User</label>
-                  <input *ngIf="isFirst" value={{persona.user}} placeholder="User" type="text" name="user" id="user" required>
+                  <input *ngIf="isFirst" value={{persona.user}} placeholder="User" type="text" name="user" id="user" required [(ngModel)]= "usuario.user">
+              
 
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Surname</label>
-                  <input *ngIf="isFirst" value={{persona.surname}} placeholder="Surname" type="text" required id="surname">
+                  <input *ngIf="isFirst" value={{persona.surname}} placeholder="Surname" type="text" required id="surname" [(ngModel)]= "usuario.surname" name="surname">
 
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Password</label>
-                  <input *ngIf="isFirst" value={{persona.password}} placeholder="Password" type="password" required id="pass">
+                  <input *ngIf="isFirst" value={{persona.password}} placeholder="Password" type="password" required id="pass" [(ngModel)]= "usuario.password" name="pass">
                   
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Company email</label>
-                  <input *ngIf="isFirst" value={{persona.company_email}} placeholder="Company email" type="email" required id="ce">
+                  <input *ngIf="isFirst" value={{persona.company_email}} placeholder="Company email" type="email" required id="ce" [(ngModel)]= "usuario.company_email" name="ce">
 
                   <br *ngIf="isFirst">
                   
                   <label *ngIf="isFirst">Personal email</label>
-                  <input *ngIf="isFirst" value={{persona.personal_email}} placeholder="Personal email" type="email" required id="pe">
+                  <input *ngIf="isFirst" value={{persona.personal_email}} placeholder="Personal email" type="email" required id="pe" [(ngModel)]= "usuario.personal_email" name="pe">
                   
                   <br *ngIf="isFirst">
                   
                   <label *ngIf="isFirst">City</label>
-                  <input *ngIf="isFirst" value={{persona.city}} placeholder="City" type="text" required id="city">
+                  <input *ngIf="isFirst" value={{persona.city}} placeholder="City" type="text" required id="city" [(ngModel)]= "usuario.city" name="city">
 
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Active?</label>
-                  <input *ngIf="isFirst" value={{persona.active}} placeholder="Active" type="checkbox" id="active">
+                  <input *ngIf="isFirst" value={{persona.active}} placeholder="Active" type="checkbox" id="active" [(ngModel)]= "usuario.active" name="active">
 
                   <br *ngIf="isFirst">
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Imagen URL</label>
-                  <input *ngIf="isFirst" type="url" id="url" value={{persona.imagen_url}}>
-
-                  <br *ngIf="isFirst">
-
-                  <label *ngIf="isFirst">Termination date</label>
-                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.termination_date}}>
+                  <input *ngIf="isFirst" type="url" id="url" value={{persona.imagen_url}} [(ngModel)]= "usuario.imagen_url" name="imagen">
 
                   <br *ngIf="isFirst">
 
                   <label *ngIf="isFirst">Created date</label>
-                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.created_date}}>
+                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.created_date}} [(ngModel)]= "usuario.created_date" name="cdate">
+
+                  <br *ngIf="isFirst">
+
+                  <label *ngIf="isFirst">Termination date</label>
+                  <input *ngIf="isFirst" type="datetime" id="tdate" value={{persona.termination_date}} [(ngModel)]= "usuario.termination_date" name="tdate">
+
+
                 </div>
             
-                <button type="submit" id="boton-enviar">Crear Persona</button>
+                <button (click) ="crearPersona()"  id="boton-enviar">Crear Persona</button>
                 <button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
     </form>
     </div>

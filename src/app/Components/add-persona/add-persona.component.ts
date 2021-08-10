@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/Persona/persona';
 import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 
@@ -10,9 +11,13 @@ import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 })
 export class AddPersonaComponent implements OnInit {
 
-  personas: Persona[] = [];
+    personas: Persona[] = [];
 
-  constructor(private personaService:PersonaServiceService) { }
+    usuario: Persona = new Persona();
+    
+  
+
+  constructor(private personaService:PersonaServiceService, private router:Router) { }
    
   ngOnInit(): void {
 
@@ -23,6 +28,15 @@ export class AddPersonaComponent implements OnInit {
       (error:any) => {
         console.log(error);
     }
+  }
+
+
+  crearPersona(): void{
+
+    console.log(this.usuario);
+    this.personaService.add(this.usuario).subscribe(
+      res => alert("Usuario " + this.usuario.user +" creado correctamente.") //this.router.navigate([''])
+    );
   }
 
 

@@ -1,16 +1,17 @@
 export class Persona {
 
-    id_persona:string = "";
-    user:string = "";
-    surname:string = "";
-    password:string = "";
-    company_email:string = "";
-    personal_email:string = "";
-    city:string = "";
-    active:boolean = false;
-    imagen_url:string = "";
-    created_date:Date | undefined;
-    termination_date: Date | undefined;
+   public id_persona:string = "";
+   public user:string = "";
+   public surname:string = "";
+   public password:string = "";
+   public company_email:string = "";
+   public personal_email:string = "";
+   public city:string = "";
+   public active:boolean = false;
+   public imagen_url:string = "";
+   public created_date:Date | undefined;
+   public termination_date: Date | undefined;
+
 
 
 }
