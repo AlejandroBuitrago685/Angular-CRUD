@@ -87,3 +87,10 @@ tbody:hover tr:hover td {
 .opcionestd {
 	  text-align: center;
   }
+
+.container2{
+	text-align: left;
+	display: flex;
+	margin-top: -90px;
+	justify-content: space-between;
+}

@@ -8,10 +8,11 @@ import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
   templateUrl: './personlist.component.html',
   styleUrls: ['./personlist.component.css']
 })
-export class PersonlistComponent implements OnInit {
+export class PersonlistComponent implements OnInit{
   
   personas: Persona[] = [];
   Filas : number[] = [];
+  
 
   constructor(private personaService:PersonaServiceService) {}
    
@@ -23,7 +24,8 @@ export class PersonlistComponent implements OnInit {
     (error:any) => {
       console.log(error);
     }
-
+    
+    //console.log(this.personas);
   }
 
   borrarPersona(fila:string){
@@ -46,6 +48,11 @@ export class PersonlistComponent implements OnInit {
         console.log("Se ha cancelado el borrado.");
     }
   
+  }
+
+  recibirMensaje(persona: Persona[]){
+    this.personas = persona;
+    console.log(persona)
   }
   
 }

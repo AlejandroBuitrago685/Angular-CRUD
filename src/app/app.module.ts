@@ -10,6 +10,7 @@ import { AddPersonaComponent } from './Components/add-persona/add-persona.compon
 import { HomeComponent } from './Components/home/home.component';
 import { PersonlistComponent } from './Components/personlist/personlist.component';
 import { UpdateComponent } from './Components/update/update.component';
+import { PersonCardComponent } from './Components/person-card/person-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UpdateComponent } from './Components/update/update.component';
     AddPersonaComponent,
     HomeComponent,
     PersonlistComponent,
-    UpdateComponent
+    UpdateComponent,
+    PersonCardComponent
   ],
   imports: [
     BrowserModule,

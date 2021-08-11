@@ -14,31 +14,34 @@ export class PersonaServiceService {
   private BorrarURL = "http://localhost:8080/v0/api/test/delete";
   private ActualizarURL = "http://localhost:8080/v0/api/test/update";
 
+  private RutaJSON = "http://localhost:3000/persona";
+ 
+
   constructor( private http:HttpClient) {}
 
   //Obtener personas
   ObtenerPersonas():Observable<Persona[]>{
-    return this.http.get<Persona[]>(this.ObtenerURL);
+    return this.http.get<Persona[]>(this.RutaJSON);
   }
 
   //Crear nueva persona
   add(persona:Persona):Observable<Persona>{
-    return this.http.post<Persona>(this.AñadirURL,persona);
+    return this.http.post<Persona>(this.RutaJSON,persona);
   }
 
   //Obtener una única persona
   get(id:string):Observable<Persona>{
-    return this.http.get<Persona>(this.ObtenerUnaURL + '/' + id);
+    return this.http.get<Persona>(this.RutaJSON + '/' + id);
   }
 
   //Borrar Persona
   delete(id:string):Observable<Persona>{
-    return this.http.delete<Persona>(this.BorrarURL + '/' + id);
+    return this.http.delete<Persona>(this.RutaJSON + '/' + id);
   }
 
   //Actualizar persona
   update(persona:Persona):Observable<Persona>{
-    return this.http.put<Persona>(this.ActualizarURL, persona);
+    return this.http.put<Persona>(this.RutaJSON, persona);
 
   }
 

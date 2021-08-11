@@ -1,0 +1,46 @@
+{
+  "persona": [
+    {
+      "id": 1,
+      "active": true,
+      "city": "Seseña Viejo",
+      "company_email": "alex@gmail.com",
+      "created_date": "2021-08-11T00:00:00.000+00:00",
+      "id_persona": "1",
+      "imagen_url": "https://www.google.es/",
+      "password": "fafaf",
+      "personal_email": "alex2@gmail.com",
+      "surname": "Buitrago",
+      "termination_date": "2021-08-11T00:00:00.000+00:00",
+      "user": "Alejandro"
+    },
+    {
+      "id": 2,
+      "active": true,
+      "city": "Seseña Nuevo",
+      "company_email": "alex@gmail.com",
+      "created_date": "2021-08-11T00:00:00.000+00:00",
+      "id_persona": "2",
+      "imagen_url": "https://www.google.es/",
+      "password": "huaibjkla",
+      "personal_email": "alex2@gmail.com",
+      "surname": "Pérez García",
+      "termination_date": "2021-08-11T00:00:00.000+00:00",
+      "user": "Alfredo"
+    },
+    {
+      "id": 3,
+      "active": false,
+      "city": "Seseña Nuevo",
+      "company_email": "alex@gmail.com",
+      "created_date": "2021-08-11T00:00:00.000+00:00",
+      "id_persona": "3",
+      "imagen_url": "https://www.google.es/",
+      "password": "huaibjkla",
+      "personal_email": "alex2@gmail.com",
+      "surname": "González",
+      "termination_date": "2021-08-11T00:00:00.000+00:00",
+      "user": "Juan"
+    }
+  ]
+}

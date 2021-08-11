@@ -1,5 +1,5 @@
 
-<div class="flex-container">
+<!--<div class="flex-container">
     <table class="container" id="table">
         <thead>
             <tr>
@@ -35,4 +35,12 @@
             </tr>
         </tbody>
     </table>
+</div>-->
+
+<div class="container2">
+    <div class="caja-personas" style="margin: 20px;" *ngFor="let persona of personas">
+        
+        <app-person-card (enviar)= "recibirMensaje($event)" [personas]="personas"></app-person-card>
+
+    </div>
 </div>

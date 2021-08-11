@@ -28,7 +28,7 @@ export class UpdateComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.id);
+    //console.log(this.id);
 
     if(this.id == null){
 
