@@ -130,6 +130,7 @@
 
   #formulario label{
     margin: 10px;
+    font-weight: 600;
   }
 
     
@@ -179,4 +180,9 @@
     margin-top: 80px;
     padding: 10px;
     border-radius: 10px;
+  }
+
+.imagen-perfil{
+    height: 50px;
+    width: 50px;
   }

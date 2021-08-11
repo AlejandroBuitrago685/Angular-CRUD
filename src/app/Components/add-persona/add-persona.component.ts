@@ -14,8 +14,6 @@ export class AddPersonaComponent implements OnInit {
     personas: Persona[] = [];
 
     usuario: Persona = new Persona();
-    
-  
 
   constructor(private personaService:PersonaServiceService, private router:Router) { }
    

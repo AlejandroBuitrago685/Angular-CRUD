@@ -1,33 +1,37 @@
 <div>
-    <form id="formulario" style="max-height: 360px;">
+    <div id="formulario" style="max-height: 360px;">
+        
+        <img src={{persona.imagen_url}} class="imagen-perfil">
         <div>
-            <label>ID Persona</label><label id="user" style="color: rgb(16, 206, 16);"></label>
+            
             <br>
-            <label>User</label><label id="user" style="color: rgb(16, 206, 16);">{{user}}</label>
+            <label>ID Persona</label><label id="user" style="color: #0d24ee;">{{persona.id_persona}}</label>
             <br>
-            <label>Surname</label><label id="surname" style="color: rgb(16, 206, 16);">{{surname}}</label>
+            <label>User</label><label id="user" style="color: #0d24ee;">{{persona.user}}</label>
             <br>
-            <label>Password</label><label id="password" style="color: rgb(16, 206, 16);">{{pass}}</label>
+            <label>Surname</label><label id="surname" style="color: #0d24ee;">{{persona.surname}}</label>
             <br>
-            <label>Company email</label><label id="ce" style="color: rgb(16, 206, 16);">{{ce}}</label>
+            <label>Password</label><label id="password" style="color: #0d24ee;">{{persona.password}}</label>
             <br>
-            <label>Personal email</label><label id="pe" style="color: rgb(16, 206, 16);">{{pe}}</label>
+            <label>Company email</label><label id="ce" style="color: #0d24ee;">{{persona.company_email}}</label>
             <br>
-            <label>City</label><label id="city" style="color: rgb(16, 206, 16);">{{city}}</label>
+            <label>Personal email</label><label id="pe" style="color: #0d24ee;">{{persona.personal_email}}</label>
             <br>
-            <label>Active?</label><label id="active" style="color: rgb(16, 206, 16);">{{active}}</label>
+            <label>City</label><label id="city" style="color: #0d24ee;">{{persona.city}}</label>
             <br>
-            <label>Imagen URL</label><label id="url" style="color: rgb(16, 206, 16);">{{url}}</label>
+            <label>Active?</label><label id="active" style="color: #0d24ee;">{{persona.active}}</label>
             <br>
-            <label>Created date</label><label id="cdate" style="color: rgb(16, 206, 16);">{{cd}}</label>
+            <label>Imagen URL</label><label id="url" style="color: #0d24ee;">{{persona.imagen_url}}</label>
             <br>
-            <label>Termination date</label><label id="tdate" style="color: rgb(16, 206, 16);">{{td}}</label>
+            <label>Created date</label><label id="cdate" style="color:#0d24ee;">{{persona.created_date}}</label>
+            <br>
+            <label>Termination date</label><label id="tdate" style="color:#0d24ee;">{{persona.termination_date}}</label>
 
-            <button type="submit" style="background-color: brown;">Borrar</button>
-            <button type="submit">Editar</button>
+            <button type="submit" (click)= "delete.emit(persona)" style="background-color: brown;">Borrar</button>
+            <button type="submit" (click)= "edit.emit(persona)">Editar</button>
             
         </div>
             
-    </form>
+    </div>
     
 </div>

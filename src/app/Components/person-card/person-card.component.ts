@@ -11,28 +11,21 @@ import { PersonlistComponent } from '../personlist/personlist.component';
 })
 export class PersonCardComponent implements OnInit {
 
-  @Output()
-  enviar: EventEmitter<Persona[]> = new EventEmitter<Persona[]>();
-
   @Input()
-  personas: Persona[] = [];
+  persona: Persona = new Persona();
+
+  @Output()
+  edit : EventEmitter<Persona> = new EventEmitter<Persona>();
+
+  @Output()
+  delete : EventEmitter<Persona> = new EventEmitter<Persona>();
   
-  city:string = "";
-  user:string = "";
-  surname:string = "";
-  ce:string = "";
-  pe:string = "";
-  cd:Date | undefined;
-  td:Date | undefined;
-  url:string = "";
-  pass:string = "";
-  active:boolean = false;
 
   constructor(private personaService:PersonaServiceService) { }
 
   ngOnInit(): void {
 
-    this.personaService.ObtenerPersonas().subscribe(
+    /*this.personaService.ObtenerPersonas().subscribe(
       p => this.personas = p
     );
     (error:any) => {
@@ -40,27 +33,8 @@ export class PersonCardComponent implements OnInit {
     }
 
     //console.log(this.personas);
-    this.enviar.emit(this.personas);
+    this.enviar.emit(this.personas);*/
     
   }
-
-  /*mandar(p: Persona[]){
-    
-    this.personas = p;
-    console.log(this.personas);
-    this.user = p[0].user;
-    this.surname = p[1].surname;
-    this.pass = p[2].password;
-    this.ce = p[3].company_email;
-    this.pe = p[4].personal_email;
-    this.city = p[5].city;
-    this.active = p[6].active;
-    this.url = p[7].imagen_url;
-    this.cd = p[8].created_date;
-    this.td = p[9].termination_date;
-
-    this.enviar.emit(this.personas);
-    
-  }*/
 
 }

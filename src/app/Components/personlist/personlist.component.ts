@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/Persona/persona';
 import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 
@@ -11,10 +11,9 @@ import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 export class PersonlistComponent implements OnInit{
   
   personas: Persona[] = [];
-  Filas : number[] = [];
   
 
-  constructor(private personaService:PersonaServiceService) {}
+  constructor(private personaService:PersonaServiceService,  private router:Router) {}
    
   ngOnInit(): void {
 
@@ -28,14 +27,14 @@ export class PersonlistComponent implements OnInit{
     //console.log(this.personas);
   }
 
-  borrarPersona(fila:string){
+  borrarPersona(id:string){
     var confirmacion = confirm("¿Está seguro de que quiere borrar el usuario seleccionado?.");
 
-    console.log(fila);
+    console.log(id);
     
     if(confirmacion){
-        this.personaService.delete(fila).subscribe(
-          resp => console.log("Se ha borrado el usuario con ID: " + fila + " correctamente.")
+        this.personaService.delete(id).subscribe(
+          resp => console.log("Se ha borrado el usuario con ID: " + id + " correctamente.")
         );
         (error:any) => {
           console.log(error);
@@ -50,9 +49,16 @@ export class PersonlistComponent implements OnInit{
   
   }
 
-  recibirMensaje(persona: Persona[]){
-    this.personas = persona;
-    console.log(persona)
+  EditarPersona(persona: Persona) {
+   console.log(persona); 
+   let id = persona.id_persona;
+   this.router.navigate(['/update/' +id ])
   }
+
+  BorrarPersona(persona: Persona) {
+    console.log(persona); 
+    let id = persona.id_persona;
+    this.borrarPersona(id);
+   }
   
 }

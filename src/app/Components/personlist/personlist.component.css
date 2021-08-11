@@ -2,6 +2,7 @@
     display: flex;
     padding: 15px;
     flex-wrap: wrap;
+	margin-top: 50px;
 }
 
 table {
@@ -91,6 +92,6 @@ tbody:hover tr:hover td {
 .container2{
 	text-align: left;
 	display: flex;
-	margin-top: -90px;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 }
