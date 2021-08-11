@@ -11,9 +11,7 @@ import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 export class UpdateComponent implements OnInit {
 
   id = this._route.snapshot.paramMap.get('id_persona');
-  persona: Persona = new Persona();
 
-  
   city:string = "";
   user:string = "";
   surname:string = "";
@@ -41,7 +39,6 @@ export class UpdateComponent implements OnInit {
       (error:any) => {
         console.log(error);
       }
-
       
     }
 

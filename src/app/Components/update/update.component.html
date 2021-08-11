@@ -5,8 +5,9 @@
     <span>Person Update</span>
     <div class="spacer"></div>
 </div>
-<div class="cajaActual">
-    <form id="formulario">
+<button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
+<div class="flex-container1" >
+    <form id="formulario" style="max-height: 300px;">
         <h3>Actualizar persona</h3>
         <p>Aquí se visualizan los datos <strong>actuales</strong> de la persona.</p>
 
@@ -33,6 +34,44 @@
             <br>
             <label>Termination date</label><label id="tdate" style="color: rgb(16, 206, 16);">{{td}}</label>
         </div>
-        <button [routerLink]="['']" type="submit" id="boton-cancelar">Cancelar</button>
     </form>
+
+    <div id="formulario">
+        <h3>Intorucir nuevos datos</h3>
+        <p>Introduzca aquí los nuevos datos para actualizarlos.</p>
+
+        <label>User</label>
+        <input placeholder="User" type="text" name="user" id="user" required>
+        <br>
+        <label>Surname</label>
+        <input placeholder="Surname" type="text" required id="surname" name="surname">
+        <br>
+        <label>Password</label>
+        <input placeholder="Password" type="password" required id="pass"  name="pass">
+        <br>
+        <label>Company email</label>
+        <input placeholder="Company email" type="email" required id="ce" name="ce">
+        <br>
+        <label>Personal email</label>
+        <input placeholder="Personal email" type="email" required id="pe" name="pe">
+        <br>
+        <label>City</label>
+        <input placeholder="City" type="text" required id="city" name="city">
+        <br>
+        <label>Active?</label>
+        <input placeholder="Active" type="checkbox" id="active" name="active">
+        <br>
+        <br>
+        <label>Imagen URL</label>
+        <input type="url" id="url" name="imagen">
+        <br>
+        <label>Created date</label>
+        <input type="datetime" id="tdate" name="cdate">
+        <br>
+        <label>Termination date</label>
+        <input type="datetime" id="tdate" name="tdate">
+        <br>
+        <button type="submit" id="boton-actualizar">Actualizar datos</button>
+
+      </div>
 </div>
