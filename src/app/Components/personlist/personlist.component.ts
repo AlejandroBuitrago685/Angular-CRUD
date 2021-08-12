@@ -34,7 +34,7 @@ export class PersonlistComponent implements OnInit{
     
     if(confirmacion){
         this.personaService.delete(id).subscribe(
-          resp => console.log("Se ha borrado el usuario con ID: " + id + " correctamente.")
+          resp => this.personaService.setNotificacion(+1)
         );
         (error:any) => {
           console.log(error);

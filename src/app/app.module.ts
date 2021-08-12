@@ -11,6 +11,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { PersonlistComponent } from './Components/personlist/personlist.component';
 import { UpdateComponent } from './Components/update/update.component';
 import { PersonCardComponent } from './Components/person-card/person-card.component';
+import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PersonCardComponent } from './Components/person-card/person-card.compon
     HomeComponent,
     PersonlistComponent,
     UpdateComponent,
-    PersonCardComponent
+    PersonCardComponent,
+    NotificacionesComponent
   ],
   imports: [
     BrowserModule,

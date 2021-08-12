@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotificacionesComponent } from 'src/app/notificaciones/notificaciones.component';
 import { Persona } from 'src/app/Persona/persona';
 import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
 
@@ -57,14 +58,15 @@ export class AddPersonaComponent implements OnInit {
     this.usuario.termination_date = this.miFormulario.get('td')?.value;
     this.usuario.active = this.miFormulario.get('active')?.value;
 
-    console.log(this.usuario);
+    //console.log(this.usuario);
     this.personaService.add(this.usuario).subscribe(
-      res => this.router.navigate([''])
+      res => this.personaService.setNotificacion(+1)
     );
     (error:any) => {
       console.log(error);
   }
 
+  
     alert("Usuario " + this.usuario.user +" creado correctamente.");
     this.router.navigate(['']);
     

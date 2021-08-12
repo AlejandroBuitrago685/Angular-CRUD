@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from './persona';
 
@@ -18,6 +18,20 @@ export class PersonaServiceService {
  
 
   constructor( private http:HttpClient) {}
+
+  contador: number;
+
+  @Output()
+  notificacion : EventEmitter<number> = new EventEmitter<number>();
+
+  setNotificacion(n : number){
+    this.contador = n++;
+    this.EmitirNotificacion();
+  }
+
+  EmitirNotificacion(){
+    this.notificacion.emit(this.contador);
+  }
 
   //Obtener personas
   ObtenerPersonas():Observable<Persona[]>{
@@ -42,7 +56,6 @@ export class PersonaServiceService {
   //Actualizar persona
   update(persona:Persona):Observable<Persona>{
     return this.http.put<Persona>(this.RutaJSON, persona);
-
   }
 
 }

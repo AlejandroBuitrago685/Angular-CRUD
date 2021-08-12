@@ -69,20 +69,6 @@
       "created_date": "2021-08-11",
       "termination_date": "2021-08-27",
       "id": 6
-    },
-    {
-      "id_persona": "7",
-      "user": "Jorge",
-      "surname": "García",
-      "password": "IgnacioRDGZ",
-      "company_email": "Ignaciorgz@gmail.com",
-      "personal_email": "rgzignacio@gmail.com",
-      "city": "Madrid",
-      "active": true,
-      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135715.png",
-      "created_date": "2021-08-11",
-      "termination_date": "2021-08-27",
-      "id": 7
     }
   ]
 }

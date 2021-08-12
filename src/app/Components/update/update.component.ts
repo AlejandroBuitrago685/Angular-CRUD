@@ -88,7 +88,7 @@ export class UpdateComponent implements OnInit {
 
 
     this.personService.update(this.usuario).subscribe(
-      p => this.router.navigate([''])
+      p =>  this.personService.setNotificacion(+1)
     );
     (error:any) => {
       console.log(error);
