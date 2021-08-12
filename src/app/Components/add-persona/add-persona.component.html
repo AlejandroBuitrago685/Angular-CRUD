@@ -7,59 +7,59 @@
 </div>
 
 <div class="caja1">
-  <form id="formulario">
+  <form id="formulario" [formGroup]="miFormulario">
     <h3>Crear Persona</h3>
 
     <div>
       <label>User</label>
-      <input placeholder="User" type="text" name="user" id="user" required [(ngModel)]="usuario.user">
+      <input placeholder="User" type="text" name="user" id="user" formControlName = "user">
 
 
       <br>
 
       <label>Surname</label>
-      <input placeholder="Surname" type="text" required id="surname" [(ngModel)]="usuario.surname" name="surname">
+      <input placeholder="Surname" type="text" id="surname" name="surname" formControlName = "surname">
 
       <br>
 
       <label>Password</label>
-      <input placeholder="Password" type="password" required id="pass" [(ngModel)]="usuario.password" name="pass">
+      <input placeholder="Password" type="password" id="pass" name="pass" formControlName = "password">
 
       <br>
 
       <label>Company email</label>
-      <input placeholder="Company email" type="email" required id="ce" [(ngModel)]="usuario.company_email" name="ce">
+      <input placeholder="Company email" type="email" id="ce" name="ce" formControlName = "ce">
 
       <br>
 
       <label>Personal email</label>
-      <input placeholder="Personal email" type="email" required id="pe" [(ngModel)]="usuario.personal_email" name="pe">
+      <input placeholder="Personal email" type="email" id="pe" name="pe" formControlName = "pe">
 
       <br>
 
       <label>City</label>
-      <input placeholder="City" type="text" required id="city" [(ngModel)]="usuario.city" name="city">
+      <input placeholder="City" type="text" id="city" name="city" formControlName = "city">
 
       <br>
 
       <label>Active?</label>
-      <input placeholder="Active" type="checkbox" id="active" [(ngModel)]="usuario.active" name="active">
+      <input placeholder="Active" type="checkbox" id="active" name="active" formControlName = "active">
 
       <br>
       <br>
 
       <label>Imagen URL</label>
-      <input type="url" id="url" [(ngModel)]="usuario.imagen_url" name="imagen">
+      <input type="url" id="url" name="imagen" formControlName = "url">
 
       <br>
 
       <label>Created date</label>
-      <input type="datetime" id="tdate" [(ngModel)]="usuario.created_date" name="cdate">
+      <input type="datetime" id="tdate" name="cdate" formControlName = "cd">
 
       <br>
 
       <label>Termination date</label>
-      <input type="datetime" id="tdate" [(ngModel)]="usuario.termination_date" name="tdate">
+      <input type="datetime" id="tdate" name="tdate" formControlName = "td">
 
 
     </div>

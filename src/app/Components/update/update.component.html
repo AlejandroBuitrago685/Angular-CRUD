@@ -36,42 +36,65 @@
         </div>
     </form>
 
-    <div id="formulario">
+    <div id="formulario" [formGroup]="miFormulario">
         <h3>Intorucir nuevos datos</h3>
         <p>Introduzca aquí los nuevos datos para actualizarlos.</p>
 
-        <label>User</label>
-        <input placeholder="User" type="text" name="user" id="user" required>
-        <br>
-        <label>Surname</label>
-        <input placeholder="Surname" type="text" required id="surname" name="surname">
-        <br>
-        <label>Password</label>
-        <input placeholder="Password" type="password" required id="pass"  name="pass">
-        <br>
-        <label>Company email</label>
-        <input placeholder="Company email" type="email" required id="ce" name="ce">
-        <br>
-        <label>Personal email</label>
-        <input placeholder="Personal email" type="email" required id="pe" name="pe">
-        <br>
-        <label>City</label>
-        <input placeholder="City" type="text" required id="city" name="city">
-        <br>
-        <label>Active?</label>
-        <input placeholder="Active" type="checkbox" id="active" name="active">
-        <br>
-        <br>
-        <label>Imagen URL</label>
-        <input type="url" id="url" name="imagen">
-        <br>
-        <label>Created date</label>
-        <input type="datetime" id="tdate" name="cdate">
-        <br>
-        <label>Termination date</label>
-        <input type="datetime" id="tdate" name="tdate">
-        <br>
-        <button type="submit" id="boton-actualizar">Actualizar datos</button>
+        <div>
+            <label>User</label>
+            <input placeholder="User" type="text" name="user" id="user" formControlName = "user">
+      
+      
+            <br>
+      
+            <label>Surname</label>
+            <input placeholder="Surname" type="text" id="surname" name="surname" formControlName = "surname">
+      
+            <br>
+      
+            <label>Password</label>
+            <input placeholder="Password" type="password" id="pass" name="pass" formControlName = "password">
+      
+            <br>
+      
+            <label>Company email</label>
+            <input placeholder="Company email" type="email" id="ce" name="ce" formControlName = "ce">
+      
+            <br>
+      
+            <label>Personal email</label>
+            <input placeholder="Personal email" type="email" id="pe" name="pe" formControlName = "pe">
+      
+            <br>
+      
+            <label>City</label>
+            <input placeholder="City" type="text" id="city" name="city" formControlName = "city">
+      
+            <br>
+      
+            <label>Active?</label>
+            <input placeholder="Active" type="checkbox" id="active" name="active" formControlName = "active">
+      
+            <br>
+            <br>
+      
+            <label>Imagen URL</label>
+            <input type="url" id="url" name="imagen" formControlName = "url">
+      
+            <br>
+      
+            <label>Created date</label>
+            <input type="datetime" id="tdate" name="cdate" formControlName = "cd">
+      
+            <br>
+      
+            <label>Termination date</label>
+            <input type="datetime" id="tdate" name="tdate" formControlName = "td">
+      
+      
+          </div>
+      
+        <button type="submit" id="boton-actualizar" (click)="actualizar()">Actualizar datos</button>
 
       </div>
 </div>

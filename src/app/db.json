@@ -42,7 +42,6 @@
       "termination_date": "2021-08-27",
       "id": 4
     },
-
     {
       "id_persona": "5",
       "user": "Pepe",
@@ -57,7 +56,6 @@
       "termination_date": "2021-08-27",
       "id": 5
     },
-
     {
       "id_persona": "6",
       "user": "María",
@@ -72,7 +70,6 @@
       "termination_date": "2021-08-27",
       "id": 6
     },
-
     {
       "id_persona": "7",
       "user": "Jorge",
