@@ -6,23 +6,31 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { AddPersonaComponent } from './Components/add-persona/add-persona.component';
-import { HomeComponent } from './Components/home/home.component';
-import { PersonlistComponent } from './Components/personlist/personlist.component';
-import { UpdateComponent } from './Components/update/update.component';
-import { PersonCardComponent } from './Components/person-card/person-card.component';
-import { NotificacionesComponent } from './notificaciones/notificaciones.component';
+import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
+import { HomePersonComponent } from './Components/Person/homePerson/homePerson.component';
+import { PersonlistComponent } from './Components/Person/personlist/personlist.component';
+import { UpdateComponent } from './Components/Person/update/update.component';
+import { PersonCardComponent } from './Components/Person/person-card/person-card.component';
+import { NotificacionesComponent } from './Components/notificaciones/notificaciones.component';
+import { IndexComponent } from './index/index.component';
+import { HomeStudentComponent } from './Components/Student/home-student/home-student.component';
+import { StudentListComponent } from './Components/Student/student-list/student-list.component';
+import { StudentCardComponent } from './Components/Student/student-card/student-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPersonaComponent,
-    HomeComponent,
+    HomePersonComponent,
     PersonlistComponent,
     UpdateComponent,
     PersonCardComponent,
-    NotificacionesComponent
+    NotificacionesComponent,
+    IndexComponent,
+    HomeStudentComponent,
+    StudentListComponent,
+    StudentCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { getLocaleDateTimeFormat } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Persona } from 'src/app/Persona/persona';
-import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
+import { Persona } from 'src/app/Persona/Clases/persona';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 import { PersonlistComponent } from '../personlist/personlist.component';
 
 @Component({
@@ -24,16 +24,6 @@ export class PersonCardComponent implements OnInit {
   constructor(private personaService:PersonaServiceService) { }
 
   ngOnInit(): void {
-
-    /*this.personaService.ObtenerPersonas().subscribe(
-      p => this.personas = p
-    );
-    (error:any) => {
-      console.log(error);
-    }
-
-    //console.log(this.personas);
-    this.enviar.emit(this.personas);*/
     
   }
 

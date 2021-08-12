@@ -1,0 +1,38 @@
+<div class="flex-container">
+    <table class="container" id="table">
+        <thead>
+            <tr>
+                <th>ID Estudiante</th>
+                <th>ID Persona</th>
+                <th>Horas semanales</th>
+                <th>Comentarios</th>
+                <th>ID Profesor</th>
+                <th>Branch</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiante of estudiantes ; let i= index" id="{{i}}">
+                <td style="color: #1976d2;">{{estudiante.id_student}}</td>
+                <td>{{estudiante.id_persona}}</td>
+                <td>{{estudiante.num_hoursweek}}</td>
+                <td>{{estudiante.coments}}</td>
+                <td>{{estudiante.id_profesor}}</td>
+                <td>{{estudiante.branch}}</td>
+                <td class="opcionestd"><button (click)="borrarEstudiante(estudiante.id_student)" class="button-delete">Borrar</button>
+                    <button [routerLink]="['/studentupdate', estudiante.id_student]" class="button-update">Actualizar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container2">
+    <div class="caja-estudiantes" style="margin-left: 20px;" *ngFor="let estudiante of estudiantes">
+        
+        <app-student-card (edit)=EditarEstudiante(estudiante) (delete)=BorrarEstudiante(estudiante) [estudiante]="estudiante"></app-student-card>
+
+    </div>
+</div>
+
+
+

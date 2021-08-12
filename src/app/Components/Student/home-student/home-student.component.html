@@ -1,0 +1,21 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img
+      width="30"
+      alt="Angular Logo"
+      src="https://image.flaticon.com/icons/png/512/507/507257.png"
+      [routerLink]="['']"
+    />
+    <span>Student Management</span>
+      <div class="spacer"></div>
+      <app-notificaciones style="margin-right: 50px;"></app-notificaciones>
+  </div>
+
+<div class="cajaAdd">
+  
+    <h2 class="tituloAdd">Administración de Estudiantes</h2>
+    <button [routerLink]="['']" class="AddButton">Añadir Estudiante</button>
+    <app-student-list></app-student-list>
+</div>
+
+

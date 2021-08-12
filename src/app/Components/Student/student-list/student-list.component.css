@@ -1,0 +1,97 @@
+.flex-container{
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+table {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 30px auto;
+	text-align: left;
+	width: 800px;
+	border-radius: 5px;
+}	
+
+th {
+    background-color: #777;
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+    font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+	text-shadow: 0 1px 0 #000;	
+}
+
+td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.button-delete{
+	background-color: rgb(189, 59, 59);
+	border: none;
+	border-radius: 10px;
+	color: white;
+	padding: 5px;
+}
+
+.button-delete:hover {
+	background: rgb(201, 2, 2);
+  }
+  
+.button-delete:active {
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+.button-update{
+	background-color: #1976d2;
+	border: none;
+	margin-top: 10px;
+	border-radius: 10px;
+	color: white;
+	padding: 5px;
+}
+
+.button-update:hover {
+	background: #1280ee;
+  }
+  
+.button-update:active {
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+
+.opcionestd {
+	  text-align: center;
+  }
+
+.container2{
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

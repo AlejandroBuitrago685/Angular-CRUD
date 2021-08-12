@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NotificacionesComponent } from 'src/app/notificaciones/notificaciones.component';
-import { Persona } from 'src/app/Persona/persona';
-import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
+import { NotificacionesComponent } from 'src/app/Components/notificaciones/notificaciones.component';
+import { Persona } from 'src/app/Persona/Clases/persona';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 
 @Component({
   selector: 'app-add-persona',

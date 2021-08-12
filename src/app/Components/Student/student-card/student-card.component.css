@@ -1,0 +1,87 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    text-align: center;
+    margin: 5px;
+    color: #1976d2;
+    font-size: medium;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  button:hover {
+    background: #437ea0;
+  }
+  
+  button:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  #formulario {
+    background: #e6e6e6ee;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 150px 0;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  #formulario input[type="text"],
+  #formulario input[type="email"],
+  #formulario input[type="password"],
+  #formulario input[type="url"]
+  {
+    width: 90%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #formulario label{
+    margin: 10px;
+    font-weight: 600;
+  }
+
+    
+  #formulario h3 {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  
+  #formulario button {
+    width: 100%;
+    background: #0d24ee;
+    color: #FFF;
+    font-size: 14px;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #formulario button:hover {
+    background: #437ea0;
+  }
+  
+  #formulario button:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  #formulario input:focus
+  {
+    outline: 0;
+    border: 1px solid #aaa;
+  }

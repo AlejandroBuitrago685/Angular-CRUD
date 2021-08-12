@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Persona } from 'src/app/Persona/persona';
-import { PersonaServiceService } from 'src/app/Persona/persona-service.service';
+import { Persona } from 'src/app/Persona/Clases/persona';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 
 @Component({
   selector: 'app-update',

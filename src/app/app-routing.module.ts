@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddPersonaComponent } from './Components/add-persona/add-persona.component';
-import { HomeComponent } from './Components/home/home.component';
-import { UpdateComponent } from './Components/update/update.component';
+import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
+import { HomePersonComponent } from './Components/Person/homePerson/homePerson.component';
+import { UpdateComponent } from './Components/Person/update/update.component';
+import { HomeStudentComponent } from './Components/Student/home-student/home-student.component';
+import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
-  { path: 'add', component: AddPersonaComponent },
-  { path: '', component: HomeComponent },
-  { path: 'update/:id_persona', component: UpdateComponent }
+  { path: '', component:  IndexComponent},
+  { path: 'person', component: HomePersonComponent },
+  { path: 'personadd', component: AddPersonaComponent },
+  { path: 'student', component: HomeStudentComponent },
+  { path: 'personupdate/:id_persona', component: UpdateComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,27 @@
+<div>
+    <div id="formulario" style="max-height: 360px;">
+        
+        <div>
+            
+            <br>
+            <label>ID Estudiante</label><label style="color: #0d24ee;">{{estudiante.id_student}}</label>
+            <br>
+            <label>ID Persona</label><label style="color: #0d24ee;">{{estudiante.id_persona}}</label>
+            <br>
+            <label>Horas semanales</label><label style="color: #0d24ee;">{{estudiante.num_hoursweek}}</label>
+            <br>
+            <label>Comentarios</label><label style="color: #0d24ee;">{{estudiante.coments}}</label>
+            <br>
+            <label>ID Profesor</label><label style="color: #0d24ee;">{{estudiante.id_profesor}}</label>
+            <br>
+            <label>Branch</label><label style="color: #0d24ee;">{{estudiante.branch}}</label>
+            
+
+            <button type="submit" (click)= "delete.emit(estudiante)" style="background-color: brown;">Borrar</button>
+            <button type="submit" (click)= "edit.emit(estudiante)">Editar</button>
+            
+        </div>
+            
+    </div>
+    
+</div>

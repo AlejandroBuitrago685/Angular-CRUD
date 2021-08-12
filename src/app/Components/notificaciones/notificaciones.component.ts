@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaServiceService } from '../Persona/persona-service.service';
+import { PersonaServiceService } from '../../Persona/Servicios/persona-service.service';
 
 @Component({
   selector: 'app-notificaciones',

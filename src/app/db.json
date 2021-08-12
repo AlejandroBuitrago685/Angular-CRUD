@@ -70,5 +70,27 @@
       "termination_date": "2021-08-27",
       "id": 6
     }
+  ],
+
+  "estudiante": [
+    {
+      "id": 1,
+      "id_student" : "1",
+      "id_persona" : "1",
+      "num_hoursweek" : 25,
+      "coments" : "Esto es un comentario",
+      "id_profesor" : "1",
+      "branch" : "Esto es un branch"
+    },
+
+    {
+      "id": 2,
+      "id_student" : "2",
+      "id_persona" : "2",
+      "num_hoursweek" : 45,
+      "coments" : "Esto es un comentario",
+      "id_profesor" : "2",
+      "branch" : "Esto es un branch"
+    }
   ]
 }
