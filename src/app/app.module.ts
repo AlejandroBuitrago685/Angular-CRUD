@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ModalComponent } from './Components/Student/Add-modal/modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
@@ -30,14 +33,18 @@ import { StudentCardComponent } from './Components/Student/student-card/student-
     IndexComponent,
     HomeStudentComponent,
     StudentListComponent,
-    StudentCardComponent
+    StudentCardComponent, 
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

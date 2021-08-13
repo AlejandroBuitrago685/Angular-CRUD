@@ -30,11 +30,9 @@ export class AddPersonaComponent implements OnInit {
       td: new FormControl()
     });
 
-
   constructor(private personaService:PersonaServiceService, private router:Router) { }
    
   ngOnInit(): void {
-
 
     this.personaService.ObtenerPersonas().subscribe(
       p => this.personas = p
@@ -60,7 +58,7 @@ export class AddPersonaComponent implements OnInit {
 
     //console.log(this.usuario);
     this.personaService.add(this.usuario).subscribe(
-      res => this.personaService.setNotificacion(+1)
+      res => this.personaService.setNotificacion()
     );
     (error:any) => {
       console.log(error);

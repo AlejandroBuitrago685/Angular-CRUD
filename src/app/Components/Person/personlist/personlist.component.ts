@@ -34,13 +34,13 @@ export class PersonlistComponent implements OnInit{
     
     if(confirmacion){
         this.personaService.delete(id).subscribe(
-          resp => this.personaService.setNotificacion(+1)
+          resp => this.personaService.setNotificacion()
         );
         (error:any) => {
           console.log(error);
         }
 
-        window.location.reload();
+        this.router.navigate(['person' +id ])
       
     }
     else{

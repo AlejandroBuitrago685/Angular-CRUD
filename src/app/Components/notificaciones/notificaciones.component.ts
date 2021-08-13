@@ -1,3 +1,4 @@
+import { mergeNsAndName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PersonaServiceService } from '../../Persona/Servicios/persona-service.service';
 
@@ -8,13 +9,16 @@ import { PersonaServiceService } from '../../Persona/Servicios/persona-service.s
 })
 export class NotificacionesComponent implements OnInit {
   
-  nNotificaciones: number = 0;
+  nNotificaciones = localStorage.getItem("notificaciones");
 
   constructor(private servicioPersona : PersonaServiceService) { }
 
   ngOnInit(): void {
-    this.servicioPersona.notificacion.subscribe(
+
+    console.log(this.nNotificaciones);
+
+   /* this.servicioPersona.notificacion.subscribe(
       p => this.nNotificaciones = p
-    );
+    );*/
   }
 }

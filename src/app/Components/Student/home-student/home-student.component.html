@@ -14,7 +14,7 @@
 <div class="cajaAdd">
   
     <h2 class="tituloAdd">Administración de Estudiantes</h2>
-    <button [routerLink]="['']" class="AddButton">Añadir Estudiante</button>
+    <button (click)="openDialog()" class="AddButton">Añadir Estudiante</button>
     <app-student-list></app-student-list>
 </div>
 

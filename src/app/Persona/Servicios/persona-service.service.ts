@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../Clases/persona';
 
@@ -19,18 +19,12 @@ export class PersonaServiceService {
 
   constructor( private http:HttpClient) {}
 
-  contador: number;
+  contador : any = localStorage.getItem("notificaiones");
+  nombre:string;
 
-  @Output()
-  notificacion : EventEmitter<number> = new EventEmitter<number>();
-
-  setNotificacion(n : number){
-    this.contador = n++;
-    this.EmitirNotificacion();
-  }
-
-  EmitirNotificacion(){
-    this.notificacion.emit(this.contador);
+  setNotificacion(){
+    this.contador++;
+    localStorage.setItem("notificaciones",this.contador.toString());
   }
 
   //Obtener personas
