@@ -85,3 +85,14 @@
     outline: 0;
     border: 1px solid #aaa;
   }
+
+  .imagen-card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+    margin-top: -80px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+
+  }

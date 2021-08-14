@@ -20,7 +20,7 @@
                 <td>{{estudiante.id_profesor}}</td>
                 <td>{{estudiante.branch}}</td>
                 <td class="opcionestd"><button (click)="borrarEstudiante(estudiante.id_student)" class="button-delete">Borrar</button>
-                    <button [routerLink]="['/studentupdate', estudiante.id_student]" class="button-update">Actualizar</button></td>
+                    <button (click)="EditarEstudiante(estudiante)" class="button-update">Actualizar</button></td>
             </tr>
         </tbody>
     </table>

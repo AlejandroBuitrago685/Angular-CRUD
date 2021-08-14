@@ -66,7 +66,7 @@ export class AddPersonaComponent implements OnInit {
 
   
     alert("Usuario " + this.usuario.user +" creado correctamente.");
-    this.router.navigate(['']);
+    this.router.navigate(['person']);
     
   }
 

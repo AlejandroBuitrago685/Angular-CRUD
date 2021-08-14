@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
 import { HomePersonComponent } from './Components/Person/homePerson/homePerson.component';
 import { UpdateComponent } from './Components/Person/update/update.component';
+import { ModalComponent } from './Components/Student/Add-modal/modal.component';
 import { HomeStudentComponent } from './Components/Student/home-student/home-student.component';
 import { IndexComponent } from './index/index.component';
 

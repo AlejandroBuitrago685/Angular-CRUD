@@ -19,6 +19,7 @@ import { IndexComponent } from './index/index.component';
 import { HomeStudentComponent } from './Components/Student/home-student/home-student.component';
 import { StudentListComponent } from './Components/Student/student-list/student-list.component';
 import { StudentCardComponent } from './Components/Student/student-card/student-card.component';
+import { UpdateModalComponent } from './Components/Student/update-modal/update-modal.component';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { StudentCardComponent } from './Components/Student/student-card/student-
     HomeStudentComponent,
     StudentListComponent,
     StudentCardComponent, 
-    ModalComponent
+    ModalComponent, UpdateModalComponent
   ],
   imports: [
     BrowserModule,

@@ -15,32 +15,18 @@
       "user": "Alejandro"
     },
     {
-      "id": 3,
-      "active": true,
-      "city": "Seseña Nuevo",
+      "id_persona": "2",
+      "user": "Alejandro",
+      "surname": "Buitrago",
+      "password": "bhcjcj",
       "company_email": "alex@gmail.com",
-      "created_date": "2021-08-11",
-      "id_persona": "3",
-      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135789.png",
-      "password": "affahi_59",
       "personal_email": "alex2@gmail.com",
-      "surname": "González",
-      "termination_date": "2021-08-11",
-      "user": "Gema"
-    },
-    {
-      "id_persona": "6",
-      "user": "María",
-      "surname": "González",
-      "password": "IgnacioRDGZ",
-      "company_email": "Ignaciorgz@gmail.com",
-      "personal_email": "rgzignacio@gmail.com",
-      "city": "Madrid",
+      "city": "Seseña Viejo",
       "active": true,
-      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135789.png",
+      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135715.png",
       "created_date": "2021-08-11",
       "termination_date": "2021-08-27",
-      "id": 6
+      "id": 2
     }
   ],
   "estudiante": [

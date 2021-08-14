@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Student } from 'src/app/Estudiante/Clases/student';
 import { StudentserviceService } from 'src/app/Estudiante/Servicios/studentservice.service';
+import { UpdateComponent } from '../../Person/update/update.component';
+import { ModalComponent } from '../Add-modal/modal.component';
+import { UpdateModalComponent } from '../update-modal/update-modal.component';
 
 @Component({
   selector: 'app-student-list',
@@ -12,7 +16,7 @@ export class StudentListComponent implements OnInit {
 
   estudiantes : Student[] = [];
 
-  constructor(private studentService:StudentserviceService) { }
+  constructor(private studentService:StudentserviceService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -48,9 +52,18 @@ export class StudentListComponent implements OnInit {
   }
 
   EditarEstudiante(estudiante: Student) {
-    /*console.log(persona); 
-    let id = persona.id_persona;
-    this.router.navigate(['/update/' +id ])*/
+    
+    let id = estudiante.id_student;
+    var title = "Editar estudiante";
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = estudiante;
+    this.dialog.open(UpdateModalComponent, dialogConfig);
+    console.log(estudiante); 
+
    }
  
    BorrarEstudiante(estudiante: Student) {

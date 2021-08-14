@@ -30,7 +30,7 @@
                 <td>{{persona.created_date}}</td>
                 <td>{{persona.termination_date}}</td>
                 <td class="opcionestd"><button (click)="borrarPersona(persona.id_persona)" class="button-delete">Borrar</button>
-                    <button [routerLink]="['/update', persona.id_persona]" class="button-update">Actualizar</button></td>
+                    <button [routerLink]="['/personupdate', persona.id_persona]" class="button-update">Actualizar</button></td>
             </tr>
         </tbody>
     </table>

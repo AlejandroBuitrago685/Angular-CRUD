@@ -40,7 +40,7 @@ export class PersonlistComponent implements OnInit{
           console.log(error);
         }
 
-        this.router.navigate(['person' +id ])
+        this.router.navigate(['personupdate' +id ])
       
     }
     else{
@@ -52,7 +52,7 @@ export class PersonlistComponent implements OnInit{
   EditarPersona(persona: Persona) {
    console.log(persona); 
    let id = persona.id_persona;
-   this.router.navigate(['/update/' +id ])
+   this.router.navigate(['/personupdate/' +id ])
   }
 
   BorrarPersona(persona: Persona) {
