@@ -7,6 +7,7 @@ import { ModalComponent } from './Components/Student/Add-modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
@@ -45,7 +46,8 @@ import { UpdateModalComponent } from './Components/Student/update-modal/update-m
     ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
