@@ -15,30 +15,29 @@ export class UpdateComponent implements OnInit {
 
   usuario: Persona = new Persona();
 
-  miFormulario = new FormGroup({
-    user: new FormControl('', Validators.minLength(6)),
-    surname: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
-    city: new FormControl('', Validators.required),
-    url: new FormControl(),
-    ce: new FormControl('', Validators.required),
-    pe: new FormControl('', Validators.required),
-    active: new FormControl('', Validators.required),
-    cd: new FormControl('', Validators.required),
-    td: new FormControl()
-  });
-
-  city:string = "";
-  user:string = "";
-  surname:string = "";
-  ce:string = "";
-  pe:string = "";
+  city:string = this.usuario.city;
+  user:string = this.usuario.user;
+  surname:string = this.usuario.surname;
+  ce:string = this.usuario.company_email;
+  pe:string = this.usuario.personal_email;
   cd:string = "";
   td:string = "";
-  url:string = "";
-  pass:string = "";
+  url:string = this.usuario.imagen_url;
+  pass:string = this.usuario.password;
   active:boolean = false;
 
+  miFormulario = new FormGroup({
+    user: new FormControl(this.user, Validators.minLength(6)),
+    surname: new FormControl(this.surname, Validators.required),
+    password: new FormControl(this.pass, Validators.required),
+    city: new FormControl(this.usuario.city, Validators.required),
+    url: new FormControl(this.url),
+    ce: new FormControl(this.ce, Validators.required),
+    pe: new FormControl(this.pe, Validators.required),
+    active: new FormControl(this.active, Validators.required),
+    cd: new FormControl(this.cd, Validators.required),
+    td: new FormControl(this.td)
+  });
 
   constructor(private _route: ActivatedRoute, private personService : PersonaServiceService, private router:Router) { }
 
@@ -71,6 +70,7 @@ export class UpdateComponent implements OnInit {
     this.cd = p.created_date;
     this.td = p.termination_date;
     this.url = p.imagen_url;
+    
   }
 
   actualizar(){

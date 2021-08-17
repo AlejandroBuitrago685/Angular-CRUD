@@ -1,105 +1,127 @@
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
 
-  p {
-    margin: 0;
-  }
+p {
+  margin: 0;
+}
 
-  .spacer {
-    flex: 1;
-  }
+.spacer {
+  flex: 1;
+}
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+.toolbar img {
+  margin: 0 16px;
+}
 
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .cajaAdd{
-    position: relative;
-    top: 80px;
-    text-align: center;
-    margin: 0 auto;
-  }
+.cajaAdd{
+  position: relative;
+  top: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
 
 .AddButton{
-    position: relative;
-    background-color:#1976d2;
-    border: 0px;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-  }
+  position: relative;
+  background-color:#1976d2;
+  border: 0px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  left: 46%;
+  right: 54%;
+}
 
-  @media screen and (max-width: 767px) {
 
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
+button:hover {
+  background: #437ea0;
+}
 
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
+button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
+.menu-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(253, 254, 255);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
 
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
+.contenido {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
+.headerMenu{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
 
-  
-  button:hover {
-    background: #437ea0;
-  }
-  
-  button:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  }
+.vertical-menu {
+  width: 100%;
+}
+
+.vertical-menu a {
+  background-color: #303030;
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; 
+}
+
+.vertical-menu a.active {
+  background-color: #1976d2;
+  color: white;
+}
+
+.tituloAdd{
+  color: black;
+  margin-top: 100px;
+  text-align: center;
+}

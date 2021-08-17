@@ -1,170 +1,154 @@
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+.contenido {
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
 
-  p {
-    margin: 0;
-  }
+.menu-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
 
-  .spacer {
-    flex: 1;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
+p {
+  margin: 0;
+}
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+.spacer {
+  flex: 1;
+}
 
-  @media screen and (max-width: 767px) {
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
 
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
+.toolbar img {
+  margin: 0 16px;
+}
 
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  .cajaAdd{
-    position: relative;
-    top: 80px;
-    text-align: center;
-    margin: 0 auto;
-  }
 
 .AddButton{
-    position: relative;
-    background-color:#1976d2;
-    border: 0px;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: 20px;
-  }
+  position: relative;
+  background-color:#1976d2;
+  border: 0px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
 
-  @media screen and (max-width: 767px) {
 
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
 
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
+button:hover {
+  background: #437ea0;
+}
 
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
+button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
+.headerMenu{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
 
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
+.vertical-menu {
+  width: 100%; 
+}
 
-  
-  button:hover {
-    background: #437ea0;
-  }
-  
-  button:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  }
+.vertical-menu a {
+  background-color: #303030; 
+  color: white; 
+  display: block; 
+  padding: 12px; 
+  text-decoration: none; 
+}
 
-  .menu-container {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(253, 254, 255);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .contenido {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
+.vertical-menu a:hover {
+  background-color: #ccc; 
+}
 
-  .headerMenu{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+.vertical-menu a.active {
+  background-color: #1976d2; 
+  color: white;
+}
+
+.tarjetaOpciones{
+  background-color: white;
+  border-radius: 50px;
+  padding: 25px;
+  box-shadow: 2px 2px 10px black;
+  text-align: center;
+  color: #000;
+}
+
+/*Esto es el efecto de las olas*/
+.waves {
+  position:relative;
+  width: 100%;
+  height:20%;
+  margin-bottom:-7px; 
+  min-height:100px;
+  max-height:280px;
+  color: teal;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
   }
-  
-  .vertical-menu {
-    width: 100%; /* Set a width if you like */
+  100% { 
+    transform: translate3d(85px,0,0);
   }
-  
-  .vertical-menu a {
-    background-color: #303030; /* Grey background color */
-    color: white; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-  }
-  
-  .vertical-menu a.active {
-    background-color: #1976d2; /* Add a green color to the "active/current" link */
-    color: white;
-  }
+}
+  /*Esto es el efecto de las olas*/
