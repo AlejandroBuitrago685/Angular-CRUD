@@ -21,6 +21,7 @@ import { HomeStudentComponent } from './Components/Student/home-student/home-stu
 import { StudentListComponent } from './Components/Student/student-list/student-list.component';
 import { StudentCardComponent } from './Components/Student/student-card/student-card.component';
 import { UpdateModalComponent } from './Components/Student/update-modal/update-modal.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { UpdateModalComponent } from './Components/Student/update-modal/update-m
     HomeStudentComponent,
     StudentListComponent,
     StudentCardComponent, 
-    ModalComponent, UpdateModalComponent
+    ModalComponent, UpdateModalComponent, FooterComponent
   ],
   imports: [
     BrowserModule,

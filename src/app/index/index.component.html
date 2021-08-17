@@ -5,9 +5,9 @@
 
     <div class="vertical-menu">
       <ul style="list-style-type: none; margin-left: -40px;">
-        <li><a class="active">Inicio</a></li>
-        <li><a [routerLink]="['person']">Gestionar Personas</a></li>
-        <li><a [routerLink]="['student']">Gestionar Estudiantes</a></li>
+        <li><a class="active" id="home">Inicio</a></li>
+        <li><a class="person" [routerLink]="['person']" >Gestionar Personas</a></li>
+        <li><a class="student" [routerLink]="['student']">Gestionar Estudiantes</a></li>
       </ul>
     </div>
 
@@ -48,4 +48,6 @@
     </svg>
   </div>
   <!--Esto es el efecto de las olas-->
+
+  <app-footer></app-footer>
 </mat-drawer-container>

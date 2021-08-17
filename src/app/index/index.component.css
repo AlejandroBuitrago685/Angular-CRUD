@@ -21,6 +21,21 @@
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+#home::before{
+  content: url(src\assets\images\home.png);
+  margin-right: 10px;
+}
+
+.person::before{
+  content: url(src\assets\images\man2.png);
+  margin-right: 10px;
+}
+
+.student::before{
+  content: url(src\assets\images\graduated.png);
+  margin-right: 10px;
+}
+
 h1,
 h2,
 h3,
@@ -90,8 +105,9 @@ button:active {
 .vertical-menu a {
   background-color: #303030; 
   color: white; 
-  display: block; 
-  padding: 12px; 
+  display: flex;
+  font-size: medium;
+  padding: 12px;
   text-decoration: none; 
 }
 

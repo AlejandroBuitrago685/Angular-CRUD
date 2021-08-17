@@ -7,6 +7,21 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .home::before{
+    content: url(src\assets\images\home.png);
+    margin-right: 10px;
+  }
+  
+  .person::before{
+    content: url(src\assets\images\man2.png);
+    margin-right: 10px;
+  }
+  
+  #student::before{
+    content: url(src\assets\images\graduated.png);
+    margin-right: 10px;
+  }
+
   h1,
   h2,
   h3,
@@ -136,7 +151,8 @@
   .vertical-menu a {
     background-color: #303030;
     color: white;
-    display: block;
+    display: flex;
+    font-size: medium;
     padding: 12px;
     text-decoration: none;
   }

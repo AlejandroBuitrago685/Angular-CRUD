@@ -69,6 +69,21 @@ p {
   right: 54%;
 }
 
+.home::before{
+  content: url(src\assets\images\home.png);
+  margin-right: 10px;
+}
+
+#person::before{
+  content: url(src\assets\images\man2.png);
+  margin-right: 10px;
+}
+
+.student::before{
+  content: url(src\assets\images\graduated.png);
+  margin-right: 10px;
+}
+
 
 button:hover {
   background: #437ea0;
@@ -106,7 +121,8 @@ button:active {
 .vertical-menu a {
   background-color: #303030;
   color: white;
-  display: block;
+  display: flex;
+  font-size: medium;
   padding: 12px;
   text-decoration: none;
 }

@@ -5,9 +5,9 @@
 
     <div class="vertical-menu">
       <ul style="list-style-type: none; margin-left: -40px;">
-        <li><a [routerLink]="['']">Inicio</a></li>
-        <li><a class="active">Gestionar Personas</a></li>
-        <li><a [routerLink]="['/student']">Gestionar Estudiantes</a></li>
+        <li><a class="home" [routerLink]="['']">Inicio</a></li>
+        <li><a class="active" id="person">Gestionar Personas</a></li>
+        <li><a class="student" [routerLink]="['/student']">Gestionar Estudiantes</a></li>
       </ul>
     </div>
 
@@ -25,10 +25,12 @@
     <h2 class="tituloAdd">Administración de Personas</h2>
     <button [routerLink]="['../personadd']" class="AddButton">Añadir Persona</button>
     <app-personlist></app-personlist>
+    <app-footer></app-footer>
   </div>
 
+  
 </mat-drawer-container>
-
+ 
 
 
   
