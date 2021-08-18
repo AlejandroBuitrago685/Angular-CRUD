@@ -13,19 +13,6 @@ export class StudentserviceService {
 
   constructor( private http:HttpClient) {}
 
-  contador: number;
-
-  @Output()
-  notificacion : EventEmitter<number> = new EventEmitter<number>();
-
-  setNotificacion(n : number){
-    this.contador = n++;
-    this.EmitirNotificacion();
-  }
-
-  EmitirNotificacion(){
-    this.notificacion.emit(this.contador);
-  }
 
   //Obtener estudiantes
   ObtenerEstudiantes():Observable<Student[]>{

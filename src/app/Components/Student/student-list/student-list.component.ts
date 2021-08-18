@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Student } from 'src/app/Estudiante/Clases/student';
 import { StudentserviceService } from 'src/app/Estudiante/Servicios/studentservice.service';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 import { UpdateComponent } from '../../Person/update/update.component';
 import { ModalComponent } from '../Add-modal/modal.component';
 import { UpdateModalComponent } from '../update-modal/update-modal.component';
@@ -16,7 +17,7 @@ export class StudentListComponent implements OnInit {
 
   estudiantes : Student[] = [];
 
-  constructor(private studentService:StudentserviceService, private dialog: MatDialog) { }
+  constructor(private studentService:StudentserviceService, private personService: PersonaServiceService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -36,13 +37,13 @@ export class StudentListComponent implements OnInit {
     
     if(confirmacion){
         this.studentService.delete(id).subscribe(
-          resp => this.studentService.setNotificacion(+1)
+          resp => this.personService.setNotificacion()
         );
         (error:any) => {
           console.log(error);
         }
 
-        window.location.reload();
+        this.ngOnInit();
       
     }
     else{

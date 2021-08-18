@@ -40,7 +40,7 @@ export class PersonlistComponent implements OnInit{
           console.log(error);
         }
 
-        this.router.navigate(['personupdate' +id ])
+        this.ngOnInit();
       
     }
     else{

@@ -67,6 +67,8 @@ export class AddPersonaComponent implements OnInit {
   
     alert("Usuario " + this.usuario.user +" creado correctamente.");
     this.router.navigate(['person']);
+    this.ngOnInit();
+  
     
   }
 

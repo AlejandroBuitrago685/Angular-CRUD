@@ -4,6 +4,7 @@ import { Student } from 'src/app/Estudiante/Clases/student';
 import { StudentserviceService } from 'src/app/Estudiante/Servicios/studentservice.service';
 import { Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 
 
 @Component({
@@ -30,7 +31,7 @@ export class UpdateModalComponent implements OnInit {
     branch: new FormControl(this.branch)
   });
 
-  constructor(private studentService:StudentserviceService, @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(private studentService:StudentserviceService, private personService: PersonaServiceService,@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
   }
@@ -45,7 +46,7 @@ export class UpdateModalComponent implements OnInit {
     this.estudiante.branch = this.miFormulario.get('branch')?.value;
   
     this.studentService.update(id).subscribe(
-      res => this.studentService.setNotificacion(+1)
+      res => this.personService.setNotificacion()
     );
     (error:any) => {
       console.log(error);

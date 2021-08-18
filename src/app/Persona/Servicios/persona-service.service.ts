@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Persona } from '../Clases/persona';
 
@@ -17,9 +18,9 @@ export class PersonaServiceService {
   private RutaJSON = "http://localhost:3000/persona";
  
 
-  constructor( private http:HttpClient) {}
+  constructor( private http:HttpClient, private router:Router) {}
 
-  contador : any = localStorage.getItem("notificaiones");
+  contador : any = localStorage.getItem("notificaciones");
   nombre:string;
 
   setNotificacion(){

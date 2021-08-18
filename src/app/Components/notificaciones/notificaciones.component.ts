@@ -17,8 +17,5 @@ export class NotificacionesComponent implements OnInit {
 
     console.log(this.nNotificaciones);
 
-   /* this.servicioPersona.notificacion.subscribe(
-      p => this.nNotificaciones = p
-    );*/
   }
 }

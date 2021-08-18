@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
 import { Student } from '../../../Estudiante/Clases/student';
 import { StudentserviceService } from '../../../Estudiante/Servicios/studentservice.service';
 
@@ -21,7 +22,7 @@ export class ModalComponent implements OnInit {
     branch: new FormControl()
   });
 
-  constructor(private estudianteService:StudentserviceService) {}
+  constructor(private estudianteService:StudentserviceService, private personService: PersonaServiceService) {}
 
   ngOnInit(): void {
   }
@@ -35,7 +36,7 @@ export class ModalComponent implements OnInit {
     this.estudiante.branch = this.miFormulario.get('branch')?.value;
    
     this.estudianteService.add(this.estudiante).subscribe(
-      res => this.estudianteService.setNotificacion(+1)
+      res => this.personService.setNotificacion()
     );
     (error:any) => {
       console.log(error);
