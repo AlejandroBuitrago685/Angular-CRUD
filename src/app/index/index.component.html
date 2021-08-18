@@ -1,17 +1,4 @@
 <mat-drawer-container class="menu-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p class="headerMenu">Navegación</p>
-
-
-    <div class="vertical-menu">
-      <ul style="list-style-type: none; margin-left: -40px;">
-        <li><a class="active" id="home">Inicio</a></li>
-        <li><a class="person" [routerLink]="['person']" >Gestionar Personas</a></li>
-        <li><a class="student" [routerLink]="['student']">Gestionar Estudiantes</a></li>
-      </ul>
-    </div>
-
-  </mat-drawer>
 
   <div class="contenido">
     <div class="toolbar" role="banner">
@@ -19,14 +6,14 @@
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
       <span>Inicio</span>
       <div class="spacer"></div>
-      <app-notificaciones style="margin-right: 50px;"></app-notificaciones>
+      <app-notificaciones (click)="drawerNotificaciones.toggle()" (click)="drawer.close()" style="margin-right: 50px;"></app-notificaciones>
     </div>
 
     <div class="tarjetaOpciones">
       <h2 class="tituloAdd">¡Bienvenido!</h2>
       <p style="margin-bottom: 10px; font-size: medium;">Esta aplicación está creada con Angular.</p>
       <p style="margin-bottom: 10px;">¡Comencemos!</p>
-      <button type="button" class="AddButton" mat-button (click)="drawer.toggle()">Administrar</button>
+      <button type="button" class="AddButton" mat-button (click)="drawer.toggle()" (click)="drawerNotificaciones.close()">Administrar</button>
     </div>
     
   </div>
@@ -49,5 +36,25 @@
   </div>
   <!--Esto es el efecto de las olas-->
 
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p class="headerMenu">Navegación</p>
+  
+    <div class="vertical-menu">
+      <ul style="list-style-type: none; margin-left: -40px;">
+        <li><a class="active" id="home">Inicio</a></li>
+        <li><a class="person" [routerLink]="['person']" >Gestionar Personas</a></li>
+        <li><a class="student" [routerLink]="['student']">Gestionar Estudiantes</a></li>
+      </ul>
+    </div>
+  
+  </mat-drawer>
+
   <app-footer></app-footer>
 </mat-drawer-container>
+
+<mat-drawer #drawerNotificaciones class="example-sidenav" mode="side" style="text-align: center; padding: 20px;">
+  <img src="https://image.flaticon.com/icons/png/512/2645/2645883.png" width="50px" height="50px" style="margin-top: 20px;"/>
+  <p class="headerMenu" style="padding-inline: 30px;">Notificaciones</p>
+  <p>Aqui se mostrarán las notificaciones (por hacer)</p>
+
+</mat-drawer>
