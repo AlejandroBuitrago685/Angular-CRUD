@@ -4,6 +4,8 @@
     display: flex;
     background-color: #1976d2;
     justify-content: center;
+    color: white;
+    bottom: 0;
 }
 
 .info{

@@ -1,4 +1,4 @@
-<div class="flex-container">
+<ng-container *ngIf="estudiantes.length !=0; else studentEmpty" class="flex-container">
     <table class="container" id="table">
         <thead>
             <tr>
@@ -24,7 +24,7 @@
             </tr>
         </tbody>
     </table>
-</div>
+</ng-container>
 
 <div class="container2">
     <div class="caja-estudiantes" style="margin-left: 20px;" *ngFor="let estudiante of estudiantes">
@@ -33,6 +33,20 @@
 
     </div>
 </div>
+
+<ng-template #studentEmpty>
+    <div style="box-shadow: 2px 2px 2px #333; border: 1px solid; border-radius: 10px; color: #333; text-align: center; padding: 10px; margin: 100px;">
+        <div>
+          <div>
+            <label style="font-weight: 600; display: flex; justify-content: center;">¡ERROR!</label>
+          </div>
+          
+          <hr style="margin-top: 10px">
+          <label style="padding: 10px;">Lamentablemente no hemos podido encontrar ningún estudiante en la base de datos.</label><br>
+          <img src="https://image.flaticon.com/icons/png/512/752/752755.png" width="50px" style="padding: 10px;"/>
+        </div>
+      </div>
+</ng-template>
 
 
 

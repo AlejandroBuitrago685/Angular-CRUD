@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
 import { notificacion } from '../Components/notificaciones/Clases/notificacion';
 import { NotificacionesService } from '../Components/notificaciones/Servicios/notificaciones.service';
 import { PersonaServiceService } from '../Persona/Servicios/persona-service.service';
