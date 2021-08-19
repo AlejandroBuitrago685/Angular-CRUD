@@ -27,6 +27,20 @@
       "created_date": "2021-08-11",
       "termination_date": "2021-08-27",
       "id": 2
+    },
+    {
+      "id_persona": "5",
+      "user": "Alejandro",
+      "surname": "dfawFaf",
+      "password": "fwafawf",
+      "company_email": "buitragogalejandro@gmail.com",
+      "personal_email": "buitragogalejandro@gmail.com",
+      "city": "Seseña",
+      "active": true,
+      "imagen_url": "https://es.stackoverflow.com/questions/70701/ocultar-barra-de-scroll-sin-deshabilitarlo",
+      "created_date": "2000/",
+      "termination_date": null,
+      "id": 5
     }
   ],
   "estudiante": [
@@ -38,6 +52,32 @@
       "coments": "Esto es un comentario",
       "id_profesor": "1",
       "branch": "Esto es un branch"
+    }
+  ],
+  "notificacion": [
+    {
+      "titulo": "ACTUALIZADA",
+      "descripcion": "Persona actualizada correctamente",
+      "tipo": "update-notification",
+      "id": 1
+    },
+    {
+      "titulo": "CREACIÓN",
+      "descripcion": "Se ha creado el usuario Alejandro recientemente.",
+      "tipo": "add-notification",
+      "id": 2
+    },
+    {
+      "titulo": "ELIMINADO",
+      "descripcion": "Se ha eliminado un usuario recientemente.",
+      "tipo": "delete-notification",
+      "id": 3
+    },
+    {
+      "titulo": "ELIMINADO",
+      "descripcion": "Se ha eliminado un usuario recientemente.",
+      "tipo": "delete-notification",
+      "id": 4
     }
   ]
 }

@@ -1,0 +1,11 @@
+<div class="container">
+	<div>
+		<div>
+			<label style="font-weight: 600; display: flex; justify-content: center;">{{notificacion.titulo}}</label>
+			<i class="material-icons" (click)="delete.emit(notificacion)" id="deleteButton" style="position: absolute; right: 0; top: 0; margin-right: 10px;">clear</i>
+		</div>
+		
+		<hr style="margin-top: 10px">
+		<label style="padding: 10px;">{{notificacion.descripcion}}</label><br>
+	</div>
+</div>

@@ -1,4 +1,4 @@
-<mat-drawer-container class="menu-container" autosize>
+<mat-drawer-container class="menu-container" autosize autoFocus>
 
   <div class="contenido">
     <div class="toolbar" role="banner">
@@ -6,7 +6,7 @@
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
       <span>Inicio</span>
       <div class="spacer"></div>
-      <app-notificaciones (click)="drawerNotificaciones.toggle()" (click)="drawer.close()" style="margin-right: 50px;"></app-notificaciones>
+      <app-notificaciones (click)="drawerNotificaciones.toggle()"  (click)="drawer.close()" style="margin-right: 50px;"></app-notificaciones>
     </div>
 
     <div class="tarjetaOpciones">
@@ -52,10 +52,25 @@
   </mat-drawer>
 
   <mat-drawer #drawerNotificaciones class="example-sidenav" mode="side" style="text-align: center; padding: 20px;">
-    <img src="https://image.flaticon.com/icons/png/512/2645/2645883.png" width="50px" height="50px" style="margin-top: 20px;"/>
-    <p class="headerMenu" style="padding-inline: 30px;">Notificaciones</p>
-    <p>Aqui se mostrarán las notificaciones (por hacer)</p>
+    <div>
+      <img src="https://image.flaticon.com/icons/png/512/2645/2645883.png" width="50px" height="50px" style="margin-top: 20px;"/>
+      <p class="headerMenu" style="padding-inline: 30px;">Notificaciones</p>
   
+      <div>
+        <div *ngFor="let notificacion of notificaciones">
+            
+            <app-notification-card class="{{notificacion.tipo}}" (delete)=BorrarNotificaion(notificacion) [notificacion]="notificacion" style="margin-top:10px;"></app-notification-card>
+    
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="MatButtonDrawer">
+      <button mat-stroked-button color="primary" (click)="borrarTodasNotificaciones()">Limpiar todo</button><br>
+      <button mat-stroked-button color="primary" (click)="drawerNotificaciones.close()">Cerrar</button>
+    </div>
+
   </mat-drawer>
 
   <app-footer></app-footer>

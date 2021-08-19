@@ -1,0 +1,47 @@
+
+#deleteButton{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	margin-left: end;
+}
+
+.container {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@keyframes scale-in {
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes expand {
+	50% {
+		width: 350px;
+		border-radius: 6px;
+	}
+	100% {
+		width: 300px;
+		border-radius: 4px;
+		box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2),
+								0px 1px 1px 0px rgba(0,0,0,.14),
+								0px 3px 3px -1px rgba(0,0,0,.12);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: .8;
+	}
+}

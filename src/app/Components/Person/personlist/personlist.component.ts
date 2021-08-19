@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/Persona/Clases/persona';
 import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
+import { notificacion } from '../../notificaciones/Clases/notificacion';
+import { NotificacionesService } from '../../notificaciones/Servicios/notificaciones.service';
 
 @Component({
   selector: 'app-personlist',
@@ -11,9 +13,10 @@ import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service
 export class PersonlistComponent implements OnInit{
   
   personas: Persona[] = [];
+  notificacion: notificacion = new notificacion();
   
 
-  constructor(private personaService:PersonaServiceService,  private router:Router) {}
+  constructor(private personaService:PersonaServiceService, private notifyService: NotificacionesService ,private router:Router) {}
    
   ngOnInit(): void {
 
@@ -29,6 +32,9 @@ export class PersonlistComponent implements OnInit{
 
   borrarPersona(id:string){
     var confirmacion = confirm("¿Está seguro de que quiere borrar el usuario seleccionado?.");
+    this.notificacion.titulo = "ELIMINADO";
+    this.notificacion.descripcion = "Se ha eliminado un usuario recientemente.";
+    this.notificacion.tipo = "delete-notification";
 
     console.log(id);
     
@@ -37,6 +43,13 @@ export class PersonlistComponent implements OnInit{
           resp => this.personaService.setNotificacion()
         );
         (error:any) => {
+          console.log(error);
+        }
+
+        this.notifyService.add(this.notificacion).subscribe(
+          res => console.log("Notificacion creada")
+        );
+        (error: any) => {
           console.log(error);
         }
 

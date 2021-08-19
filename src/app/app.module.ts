@@ -8,6 +8,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { AddPersonaComponent } from './Components/Person/add-persona/add-persona.component';
@@ -22,6 +23,7 @@ import { StudentListComponent } from './Components/Student/student-list/student-
 import { StudentCardComponent } from './Components/Student/student-card/student-card.component';
 import { UpdateModalComponent } from './Components/Student/update-modal/update-modal.component';
 import { FooterComponent } from './footer/footer.component';
+import { NotificationCardComponent } from './Components/notificaciones/notification-card/notification-card.component';
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { FooterComponent } from './footer/footer.component';
     HomeStudentComponent,
     StudentListComponent,
     StudentCardComponent, 
-    ModalComponent, UpdateModalComponent, FooterComponent
+    ModalComponent, UpdateModalComponent, FooterComponent, NotificationCardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { FooterComponent } from './footer/footer.component';
     MatDialogModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

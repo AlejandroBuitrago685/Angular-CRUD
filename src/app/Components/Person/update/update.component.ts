@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/Persona/Clases/persona';
 import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
+import { notificacion } from '../../notificaciones/Clases/notificacion';
+import { NotificacionesService } from '../../notificaciones/Servicios/notificaciones.service';
 
 @Component({
   selector: 'app-update',
@@ -14,6 +16,7 @@ export class UpdateComponent implements OnInit {
   id = this._route.snapshot.paramMap.get('id_persona');
 
   usuario: Persona = new Persona();
+  notificacion: notificacion = new notificacion();
 
   city:string = this.usuario.city;
   user:string = this.usuario.user;
@@ -39,7 +42,7 @@ export class UpdateComponent implements OnInit {
     td: new FormControl(this.td)
   });
 
-  constructor(private _route: ActivatedRoute, private personService : PersonaServiceService, private router:Router) { }
+  constructor(private _route: ActivatedRoute, private personService : PersonaServiceService, private router:Router, private notifyService: NotificacionesService) { }
 
   ngOnInit(): void {
 
@@ -75,7 +78,7 @@ export class UpdateComponent implements OnInit {
 
   actualizar(){
 
-    this.usuario.user = this.miFormulario.get('user')?.value;
+    var _user = this.usuario.user = this.miFormulario.get('user')?.value;
     this.usuario.surname = this.miFormulario.get('surname')?.value;
     this.usuario.password = this.miFormulario.get('password')?.value;
     this.usuario.company_email = this.miFormulario.get('ce')?.value;
@@ -86,11 +89,22 @@ export class UpdateComponent implements OnInit {
     this.usuario.termination_date = this.miFormulario.get('td')?.value;
     this.usuario.active = this.miFormulario.get('active')?.value;
 
+    this.notificacion.titulo = "ACTUALIZACIÓN";
+    this.notificacion.descripcion = "Se ha actualizado el usuario " + this.user + " recientemente.";
+    this.notificacion.tipo = "update-notification";
+
 
     this.personService.update(this.usuario).subscribe(
       p =>  this.personService.setNotificacion()
     );
     (error:any) => {
+      console.log(error);
+    }
+
+    this.notifyService.add(this.notificacion).subscribe(
+      res => console.log("Notificacion creada")
+    );
+    (error: any) => {
       console.log(error);
     }
 

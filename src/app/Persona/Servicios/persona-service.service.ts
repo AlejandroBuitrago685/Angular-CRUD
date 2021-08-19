@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
+import { notificacion } from 'src/app/Components/notificaciones/Clases/notificacion';
 import { Persona } from '../Clases/persona';
 
 @Injectable({
@@ -20,11 +21,23 @@ export class PersonaServiceService {
 
   constructor( private http:HttpClient, private router:Router) {}
 
+  notificacion : notificacion = new notificacion();
+
   contador : any = localStorage.getItem("notificaciones");
   nombre:string;
 
   setNotificacion(){
     this.contador++;
+    localStorage.setItem("notificaciones",this.contador.toString());
+  }
+
+  deleteNotificacion(){
+    this.contador--;
+    localStorage.setItem("notificaciones",this.contador.toString());
+  }
+
+  deleteAllNotificaciones(){
+    this.contador = 0;
     localStorage.setItem("notificaciones",this.contador.toString());
   }
 
