@@ -5,6 +5,8 @@ import { StudentserviceService } from 'src/app/Estudiante/Servicios/studentservi
 import { Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
+import { notificacion } from '../../notificaciones/Clases/notificacion';
+import { NotificacionesService } from '../../notificaciones/Servicios/notificaciones.service';
 
 
 @Component({
@@ -13,6 +15,8 @@ import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service
   styleUrls: ['./update-modal.component.css']
 })
 export class UpdateModalComponent implements OnInit {
+
+  notificacion: notificacion = new notificacion();
 
   estudiante: Student = new Student();
   id_estudiante = this.data.id_student;
@@ -31,7 +35,7 @@ export class UpdateModalComponent implements OnInit {
     branch: new FormControl(this.branch)
   });
 
-  constructor(private studentService:StudentserviceService, private personService: PersonaServiceService,@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(private studentService:StudentserviceService, private notifyService: NotificacionesService ,private personService: PersonaServiceService,@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
   }
@@ -44,6 +48,11 @@ export class UpdateModalComponent implements OnInit {
     this.estudiante.coments = this.miFormulario.get('coments')?.value;
     this.estudiante.id_profesor = this.miFormulario.get('id_profesor')?.value;
     this.estudiante.branch = this.miFormulario.get('branch')?.value;
+
+    this.notificacion.titulo = "ACTUALIZACIÓN";
+    this.notificacion.descripcion = "Se ha actualizado el usuario " + id + " recientemente.";
+    this.notificacion.tipo = "update-notification";
+    this.notificacion.hora = new Date().toString();
   
     this.studentService.update(id).subscribe(
       res => this.personService.setNotificacion()
@@ -52,7 +61,15 @@ export class UpdateModalComponent implements OnInit {
       console.log(error);
     }
 
+    this.notifyService.add(this.notificacion).subscribe(
+      res => console.log("Notificacion creada")
+    );
+    (error: any) => {
+      console.log(error);
+    }
+
     alert("Usuario actualizado correctamente.");
+    this.ngOnInit();
   }
 }
 

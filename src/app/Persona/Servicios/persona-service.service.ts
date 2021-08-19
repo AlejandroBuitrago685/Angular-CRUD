@@ -32,8 +32,11 @@ export class PersonaServiceService {
   }
 
   deleteNotificacion(){
-    this.contador--;
-    localStorage.setItem("notificaciones",this.contador.toString());
+    if(this.contador > 0){
+      this.contador--;
+      localStorage.setItem("notificaciones",this.contador.toString());
+    }
+    
   }
 
   deleteAllNotificaciones(){

@@ -3,6 +3,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Student } from 'src/app/Estudiante/Clases/student';
 import { StudentserviceService } from 'src/app/Estudiante/Servicios/studentservice.service';
 import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
+import { notificacion } from '../../notificaciones/Clases/notificacion';
+import { NotificacionesService } from '../../notificaciones/Servicios/notificaciones.service';
 import { UpdateComponent } from '../../Person/update/update.component';
 import { ModalComponent } from '../Add-modal/modal.component';
 import { UpdateModalComponent } from '../update-modal/update-modal.component';
@@ -16,8 +18,9 @@ export class StudentListComponent implements OnInit {
 
 
   estudiantes : Student[] = [];
+  notificacion: notificacion = new notificacion();
 
-  constructor(private studentService:StudentserviceService, private personService: PersonaServiceService,private dialog: MatDialog) { }
+  constructor(private studentService:StudentserviceService, private personService: PersonaServiceService, private notifyService: NotificacionesService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -32,6 +35,10 @@ export class StudentListComponent implements OnInit {
 
   borrarEstudiante(id:string){
     var confirmacion = confirm("¿Está seguro de que quiere borrar el estudiante seleccionado?.");
+    this.notificacion.titulo = "ELIMINADO";
+    this.notificacion.descripcion = "Se ha eliminado un estudiante recientemente.";
+    this.notificacion.tipo = "delete-notification";
+    this.notificacion.hora = new Date().toString();
 
     console.log(id);
     
@@ -42,6 +49,14 @@ export class StudentListComponent implements OnInit {
         (error:any) => {
           console.log(error);
         }
+
+        this.notifyService.add(this.notificacion).subscribe(
+          res => console.log("Notificacion creada")
+        );
+        (error: any) => {
+          console.log(error);
+        }
+
 
         this.ngOnInit();
       

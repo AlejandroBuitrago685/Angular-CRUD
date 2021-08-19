@@ -13,20 +13,6 @@
       "surname": "Buitrago",
       "termination_date": "2021-08-11",
       "user": "Alejandro"
-    },
-    {
-      "id_persona": "2",
-      "user": "Alejandro",
-      "surname": "Buitrago",
-      "password": "bhcjcj",
-      "company_email": "alex@gmail.com",
-      "personal_email": "alex2@gmail.com",
-      "city": "Seseña Viejo",
-      "active": true,
-      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135715.png",
-      "created_date": "2021-08-11",
-      "termination_date": "2021-08-27",
-      "id": 2
     }
   ],
   "estudiante": [
@@ -38,9 +24,17 @@
       "coments": "Esto es un comentario",
       "id_profesor": "1",
       "branch": "Esto es un branch"
+    },
+    {
+      "id_student": "2",
+      "id_persona": "2",
+      "num_hoursweek": "24",
+      "coments": "Comentario",
+      "id_profesor": "2",
+      "branch": "Branch",
+      "id": 2
     }
   ],
   "notificacion": [
-    
   ]
 }

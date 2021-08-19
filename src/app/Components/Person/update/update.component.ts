@@ -92,6 +92,7 @@ export class UpdateComponent implements OnInit {
     this.notificacion.titulo = "ACTUALIZACIÓN";
     this.notificacion.descripcion = "Se ha actualizado el usuario " + this.user + " recientemente.";
     this.notificacion.tipo = "update-notification";
+    this.notificacion.hora = new Date().toString();
 
 
     this.personService.update(this.usuario).subscribe(

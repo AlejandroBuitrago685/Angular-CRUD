@@ -4,6 +4,7 @@ export class notificacion {
     titulo: string;
     descripcion: string;
     tipo: string;
+    hora: string;
 
 }
 

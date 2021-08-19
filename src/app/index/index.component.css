@@ -103,8 +103,8 @@ button:active {
 }
 
 .vertical-menu a {
-  background-color: #303030; 
-  color: white; 
+  background-color: white; 
+  color: #333;
   display: flex;
   font-size: medium;
   padding: 12px;

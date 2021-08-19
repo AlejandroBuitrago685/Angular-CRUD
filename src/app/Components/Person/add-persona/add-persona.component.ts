@@ -18,6 +18,7 @@ export class AddPersonaComponent implements OnInit {
   personas: Persona[] = [];
   notificacion: notificacion = new notificacion();
 
+
   usuario: Persona = new Persona();
 
   miFormulario = new FormGroup({
@@ -61,6 +62,7 @@ export class AddPersonaComponent implements OnInit {
     this.notificacion.titulo = "CREACIÓN";
     this.notificacion.descripcion = "Se ha creado el usuario " + user_ + " recientemente.";
     this.notificacion.tipo = "add-notification";
+    this.notificacion.hora = new Date().toString();
 
     //console.log(this.usuario);
     this.personaService.add(this.usuario).subscribe(

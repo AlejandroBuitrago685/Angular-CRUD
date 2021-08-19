@@ -35,6 +35,7 @@ export class PersonlistComponent implements OnInit{
     this.notificacion.titulo = "ELIMINADO";
     this.notificacion.descripcion = "Se ha eliminado un usuario recientemente.";
     this.notificacion.tipo = "delete-notification";
+    this.notificacion.hora = new Date().toString();
 
     console.log(id);
     
