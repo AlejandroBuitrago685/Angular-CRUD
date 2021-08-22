@@ -74,5 +74,7 @@ export class PersonlistComponent implements OnInit{
     let id = persona.id_persona;
     this.borrarPersona(id);
    }
+
+  
   
 }

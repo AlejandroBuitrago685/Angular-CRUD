@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './Components/Student/Add-modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -24,6 +24,9 @@ import { StudentCardComponent } from './Components/Student/student-card/student-
 import { UpdateModalComponent } from './Components/Student/update-modal/update-modal.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotificationCardComponent } from './Components/notificaciones/notification-card/notification-card.component';
+import { MyInterceptor } from './Interceptores/Interceptor';
+import { GlobalErrorHandlingService} from './ErrorHandling/global-error-handling.service';
+import { ErrorPageComponent } from './ErrorHandling/error-page/error-page.component';
 
 
 @NgModule({
@@ -39,7 +42,7 @@ import { NotificationCardComponent } from './Components/notificaciones/notificat
     HomeStudentComponent,
     StudentListComponent,
     StudentCardComponent, 
-    ModalComponent, UpdateModalComponent, FooterComponent, NotificationCardComponent
+    ModalComponent, UpdateModalComponent, FooterComponent, NotificationCardComponent, ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { NotificationCardComponent } from './Components/notificaciones/notificat
     MatSidenavModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true},
+  {provide: ErrorHandler, useClass: GlobalErrorHandlingService}],
   bootstrap: [AppComponent]
 })
 
