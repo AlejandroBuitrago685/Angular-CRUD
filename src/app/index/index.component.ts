@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { notificacion } from '../Components/notificaciones/Clases/notificacion';
 import { NotificacionesService } from '../Components/notificaciones/Servicios/notificaciones.service';
 import { PersonaServiceService } from '../Persona/Servicios/persona-service.service';
@@ -9,6 +10,8 @@ import { PersonaServiceService } from '../Persona/Servicios/persona-service.serv
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+
+  baseUrl = environment.baseUrl;
 
   notificaciones: notificacion[] = [];
 
