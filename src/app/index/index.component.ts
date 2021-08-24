@@ -11,8 +11,6 @@ import { PersonaServiceService } from '../Persona/Servicios/persona-service.serv
 })
 export class IndexComponent implements OnInit {
 
-  baseUrl = environment.baseUrl;
-
   notificaciones: notificacion[] = [];
 
   constructor(private notifyService: NotificacionesService, private personaservice:PersonaServiceService) { }

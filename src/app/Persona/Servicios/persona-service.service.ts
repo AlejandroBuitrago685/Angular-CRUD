@@ -3,6 +3,7 @@ import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import { notificacion } from 'src/app/Components/notificaciones/Clases/notificacion';
+import { environment } from 'src/environments/environment';
 import { Persona } from '../Clases/persona';
 
 @Injectable({
@@ -10,13 +11,14 @@ import { Persona } from '../Clases/persona';
 })
 export class PersonaServiceService {
 
-  private ObtenerURL = "http://localhost:8080/v0/api/test/get";
+  /*private ObtenerURL = "http://localhost:8080/v0/api/test/get";
   private ObtenerUnaURL = "http://localhost:8080/v0/api/test/id";
   private AñadirURL = "http://localhost:8080/v0/api/test/add";
   private BorrarURL = "http://localhost:8080/v0/api/test/delete";
-  private ActualizarURL = "http://localhost:8080/v0/api/test/update";
+  private ActualizarURL = "http://localhost:8080/v0/api/test/update";*/
 
-  private RutaJSON = "http://localhost:3000/persona";
+  //private RutaJSON = "http://localhost:3000/persona";
+  private RutaJSON = environment.PersonUrl;
  
 
   constructor( private http:HttpClient, private router:Router) {}

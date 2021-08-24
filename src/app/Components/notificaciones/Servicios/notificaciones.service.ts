@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { notificacion } from '../Clases/notificacion';
 
 @Injectable({
@@ -9,7 +10,8 @@ import { notificacion } from '../Clases/notificacion';
 })
 export class NotificacionesService {
 
-  private RutaJSON = "http://localhost:3000/notificacion";
+  //private RutaJSON = "http://localhost:3000/notificacion";
+  private RutaJSON = environment.NotifyUrl;
 
   constructor(private http:HttpClient, private router:Router) { }
 

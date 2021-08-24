@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Student } from '../Clases/student';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Student } from '../Clases/student';
 })
 export class StudentserviceService {
 
-  private RutaJSON = "http://localhost:3000/estudiante";
+  //private RutaJSON = "http://localhost:3000/estudiante";
+  private RutaJSON = environment.StudentUrl;
  
 
   constructor( private http:HttpClient) {}

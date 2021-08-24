@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:4200/"
+  baseUrl: "http://localhost:4200/",
+  StudentUrl: "http://localhost:3000/estudiante",
+  PersonUrl: "http://localhost:3000/persona",
+  NotifyUrl: "http://localhost:3000/notificacion"
 };
 
 /*
