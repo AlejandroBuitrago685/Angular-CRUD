@@ -70,6 +70,13 @@
             border-radius: 20px;"></app-notification-card>
 
         </div>
+
+        <div class="MatButtonDrawer">
+          <button id="BotonLimpiar" mat-stroked-button color="primary" (click)="borrarTodasNotificaciones()">Limpiar
+            todo</button><br>
+          <button mat-stroked-button color="primary" (click)="drawerNotificaciones.close()">Cerrar</button>
+        </div>
+
       </ng-container>
 
       <ng-template #notifyEmpty>
@@ -85,13 +92,12 @@
             <img src="https://image.flaticon.com/icons/png/512/1828/1828640.png" width="40px" style="padding: 10px;" />
           </div>
         </div>
+
+        <div class="MatButtonDrawer">
+          <button mat-stroked-button color="primary" (click)="drawerNotificaciones.close()">Cerrar</button>
+        </div>
       </ng-template>
 
-    </div>
-
-    <div class="MatButtonDrawer">
-      <button id="BotonLimpiar" mat-stroked-button color="primary" (click)="borrarTodasNotificaciones()">Limpiar todo</button><br>
-      <button mat-stroked-button color="primary" (click)="drawerNotificaciones.close()">Cerrar</button>
     </div>
 
   </mat-drawer>

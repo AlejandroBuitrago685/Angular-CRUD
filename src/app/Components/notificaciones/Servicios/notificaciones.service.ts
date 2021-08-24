@@ -36,8 +36,4 @@ export class NotificacionesService {
     return this.http.delete<notificacion>(this.RutaJSON + '/' + id);
   }
 
-  deleteAll():Observable<notificacion>{
-    return this.http.delete<notificacion>(this.RutaJSON + '/');
-  }
-
 }

@@ -1,5 +1,6 @@
 import { mergeNsAndName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PersonaServiceService } from '../../Persona/Servicios/persona-service.service';
 
 @Component({
@@ -9,13 +10,14 @@ import { PersonaServiceService } from '../../Persona/Servicios/persona-service.s
 })
 export class NotificacionesComponent implements OnInit {
   
-  nNotificaciones = localStorage.getItem("notificaciones");
+  nNotificaciones;
 
-  constructor(private servicioPersona : PersonaServiceService) { }
+  constructor(private servicioPersona : PersonaServiceService,private  router:Router) { }
 
   ngOnInit(): void {
-
     //console.log(this.nNotificaciones);
+    this.nNotificaciones = localStorage.getItem("notificaciones") || "0";
 
   }
+
 }

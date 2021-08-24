@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { NotificacionesComponent } from 'src/app/Components/notificaciones/notificaciones.component';
 import { Persona } from 'src/app/Persona/Clases/persona';
 import { PersonaServiceService } from 'src/app/Persona/Servicios/persona-service.service';
@@ -81,8 +81,6 @@ export class AddPersonaComponent implements OnInit {
 
     alert("Usuario " + this.usuario.user + " creado correctamente.");
     this.router.navigate(['person']);
-    this.ngOnInit();
 
   }
-
 }

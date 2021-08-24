@@ -15,10 +15,9 @@ export class MyInterceptor implements HttpInterceptor {
         return next.handle(req).pipe(
             catchError((err: HttpErrorResponse) => {
 
-                alert("Ha ocurrido un error grave");
+                alert("Ha ocurrido un error grave.\nSerá redirigido a la página de inicio.");
 
                 this.router.navigateByUrl('/');
-
 
                 return throwError(err);
 

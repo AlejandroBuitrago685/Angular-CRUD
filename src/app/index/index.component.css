@@ -170,9 +170,10 @@ button:active {
   /*Esto es el efecto de las olas*/
 
   .MatButtonDrawer{
-    width: 300px;
+    width: auto;
     bottom: 20px;
-    position: absolute;
+    margin-top: 10px;
+    background-color: white;
   }
 
   .MatButtonDrawer button{

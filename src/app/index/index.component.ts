@@ -50,7 +50,7 @@ export class IndexComponent implements OnInit {
 
   borrarTodasNotificaciones(){
     this.personaservice.deleteAllNotificaciones();
-    this.notifyService.deleteAll();
+    this.notificaciones = []; //TEMPORAL
   }
 
   BorrarNotificaion(notificacion: notificacion){

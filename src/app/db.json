@@ -13,6 +13,34 @@
       "created_date": "2021-08-11",
       "termination_date": null,
       "id": 1
+    },
+    {
+      "id_persona": "2",
+      "user": "Alejandro",
+      "surname": "foqifqº",
+      "password": "iojñl",
+      "company_email": "Ionut@gmail.com",
+      "personal_email": "alex2@gmail.com",
+      "city": "Seseña Viejo",
+      "active": true,
+      "imagen_url": "https://www.google.es/",
+      "created_date": "2021-08-11",
+      "termination_date": null,
+      "id": 2
+    },
+    {
+      "id_persona": "3",
+      "user": "Alejandro",
+      "surname": "Buitrago",
+      "password": "faklnfa",
+      "company_email": "alex@gmail.com",
+      "personal_email": "alex2@gmail.com",
+      "city": "Madrid",
+      "active": true,
+      "imagen_url": "https://www.google.es/",
+      "created_date": "2021-08-11",
+      "termination_date": null,
+      "id": 3
     }
   ],
   "estudiante": [
@@ -26,5 +54,20 @@
       "branch": "Esto es un branch"
     }
   ],
-  "notificacion": []
+  "notificacion": [
+    {
+      "titulo": "ELIMINADO",
+      "descripcion": "Se ha eliminado un usuario recientemente.",
+      "tipo": "delete-notification",
+      "hora": "Tue Aug 24 2021 14:17:39 GMT+0200 (hora de verano de Europa central)",
+      "id": 1
+    },
+    {
+      "titulo": "CREACIÓN",
+      "descripcion": "Se ha creado el usuario Alejandro recientemente.",
+      "tipo": "add-notification",
+      "hora": "Tue Aug 24 2021 18:25:21 GMT+0200 (hora de verano de Europa central)",
+      "id": 2
+    }
+  ]
 }
