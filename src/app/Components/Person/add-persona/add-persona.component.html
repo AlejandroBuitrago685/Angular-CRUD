@@ -64,7 +64,7 @@
 
     </div>
 
-    <button (click)="crearPersona()" id="boton-enviar">Crear Persona</button>
+    <button (click)="crearPersona()" [disabled]="miFormulario.invalid" id="boton-enviar">Crear Persona</button>
     <button [routerLink]="['/person']" type="submit" id="boton-cancelar">Cancelar</button>
   </form>
 </div>

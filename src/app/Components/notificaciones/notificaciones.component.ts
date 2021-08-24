@@ -15,7 +15,7 @@ export class NotificacionesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.nNotificaciones);
+    //console.log(this.nNotificaciones);
 
   }
 }

@@ -94,7 +94,7 @@
       
           </div>
       
-        <button type="submit" id="boton-actualizar" (click)="actualizar()">Actualizar datos</button>
+        <button type="submit" [disabled]="miFormulario.invalid" id="boton-actualizar" (click)="actualizar()">Actualizar datos</button>
 
       </div>
 </div>

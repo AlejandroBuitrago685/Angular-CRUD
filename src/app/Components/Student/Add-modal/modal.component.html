@@ -22,7 +22,7 @@
         <input placeholder="Branch" type="text" id="branch" name="branch" formControlName = "branch">
       </div>
   
-      <button id="boton-enviar" (click)="CrearEstudiante()">Crear Estudiante</button>
+      <button id="boton-enviar" [disabled]="miFormulario.invalid" (click)="CrearEstudiante()">Crear Estudiante</button>
       <button mat-button [mat-dialog-close] id="boton-cerrar">Cerrar</button>
     </form>
   </div>

@@ -10,7 +10,7 @@ export class GlobalErrorHandlingService implements ErrorHandler {
 
   handleError(error: any) {
     const router = this.injector.get(Router);
-    console.log(`Request URL: ${router.url}`);
+    console.warn(`Request URL ERROR: ${router.url}`);
 
     if (error instanceof HttpErrorResponse) {
       console.error("Backend código de error: ", error.status);

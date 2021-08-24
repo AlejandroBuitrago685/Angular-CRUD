@@ -1,18 +1,18 @@
 {
   "persona": [
     {
-      "id": 1,
-      "active": true,
-      "city": "Seseña Viejo",
-      "company_email": "alex@gmail.com",
-      "created_date": "2021-08-11",
       "id_persona": "1",
-      "imagen_url": "https://image.flaticon.com/icons/png/512/3135/3135715.png",
-      "password": "fafaf",
-      "personal_email": "alex2@gmail.com",
+      "user": "Alejandro",
       "surname": "Buitrago",
-      "termination_date": "2021-08-11",
-      "user": "Alejandro"
+      "password": "faklga",
+      "company_email": "alex@gmail.com",
+      "personal_email": "alex2@gmail.com",
+      "city": "Seseña Nuevo",
+      "active": true,
+      "imagen_url": "https://www.google.es/",
+      "created_date": "2021-08-11",
+      "termination_date": null,
+      "id": 1
     }
   ],
   "estudiante": [
@@ -24,17 +24,7 @@
       "coments": "Esto es un comentario",
       "id_profesor": "1",
       "branch": "Esto es un branch"
-    },
-    {
-      "id_student": "2",
-      "id_persona": "2",
-      "num_hoursweek": "24",
-      "coments": "Comentario",
-      "id_profesor": "2",
-      "branch": "Branch",
-      "id": 2
     }
   ],
-  "notificacion": [
-  ]
+  "notificacion": []
 }

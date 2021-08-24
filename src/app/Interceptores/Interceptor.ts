@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { Router } from '@angular/router';
+import { catchError } from 'rxjs/operators';
 @Injectable()
 export class MyInterceptor implements HttpInterceptor {
+
+    constructor(private router: Router) { }
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-        console.log("Esto es el interceptor");
+        //console.log("Esto es el interceptor");
 
-       /* const token = localStorage.getItem('tokenCabecera');
-        if (!token) {
-            return next.handle(req);
-        }
-        const headers = req.clone({
-            headers: req.headers.set("TOKEN", "TOKEN: ${token}")
-            
-        });*/
-        return next.handle(req);
+        return next.handle(req).pipe(
+            catchError((err: HttpErrorResponse) => {
+
+                alert("Ha ocurrido un error grave");
+
+                this.router.navigateByUrl('/');
+
+
+                return throwError(err);
+
+            })
+        );
     }
 }

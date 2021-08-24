@@ -40,8 +40,11 @@ export class PersonlistComponent implements OnInit{
     console.log(id);
     
     if(confirmacion){
+
         this.personaService.delete(id).subscribe(
-          resp => this.personaService.setNotificacion()
+          resp => { this.personaService.setNotificacion()
+            this.personas=this.personas.filter(p => p.id_persona != id)
+          }
         );
         (error:any) => {
           console.log(error);
@@ -53,8 +56,6 @@ export class PersonlistComponent implements OnInit{
         (error: any) => {
           console.log(error);
         }
-
-        this.ngOnInit();
       
     }
     else{

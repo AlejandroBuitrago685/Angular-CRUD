@@ -44,7 +44,9 @@ export class StudentListComponent implements OnInit {
     
     if(confirmacion){
         this.studentService.delete(id).subscribe(
-          resp => this.personService.setNotificacion()
+          resp => {this.personService.setNotificacion()
+            this.estudiantes=this.estudiantes.filter(p => p.id_student != id)
+          }
         );
         (error:any) => {
           console.log(error);
